@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# Next.js build output
+/.next
+/out
+/dist
+/.wrangler
+
+# local environment files
+.env*
+!.env.example
+
+# generated review captures
+/.impeccable/review
+
+# local agent tooling
+/.agents
+/.codex
+/.impeccable
+
+# operating system and tooling noise
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
