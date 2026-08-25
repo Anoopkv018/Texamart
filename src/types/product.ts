@@ -5,8 +5,15 @@ export type ProductCategory =
   | "keychains-gifts"
   | "drinkware"
   | "stationery"
+  | "sachets"
   | "bags-accessories"
   | "other-products";
+
+export type ProductImage = {
+  src: string;
+  alt: string;
+  caption?: string;
+};
 
 export type Product = {
   id: string;
@@ -14,6 +21,7 @@ export type Product = {
   name: string;
   category: ProductCategory;
   image?: string;
+  gallery?: ProductImage[];
   description: string;
   priceOptions?: number[];
   moq?: number;

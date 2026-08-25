@@ -26,13 +26,29 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   const category = getCategory(product.category);
   const related = getProductsByCategory(product.category).filter((item) => item.id !== product.id).slice(0,3);
   const quote = createWhatsAppUrl(buildProductEnquiryMessage({ product }));
+  const productImages = product.image
+    ? [{ src: product.image, alt: product.name, caption: "Product view" }, ...(product.gallery ?? [])]
+    : product.gallery ?? [];
   return (
     <>
       <section className="section pt-32 md:pt-40">
         <div className="container">
           <Link href={`/products/${product.category}`} className="mb-8 inline-flex items-center gap-2 text-sm font-extrabold text-[var(--brand-primary)]"><ArrowLeft size={16} /> Back to {category?.name}</Link>
           <div className="detail-grid">
-            <div className="detail-visual"><div className="absolute inset-0">{product.image ? <Image src={product.image} alt={product.name} fill loading="eager" sizes="(max-width: 820px) 100vw, 52vw" /> : <div className="product-fallback">{product.name.slice(0,2).toUpperCase()}</div>}</div></div>
+            {productImages.length > 0 ? (
+              <div className={`detail-gallery ${productImages.length > 1 ? "detail-gallery-multiple" : ""}`}>
+                {productImages.map((item, index) => (
+                  <figure className={`detail-gallery-item ${index === 0 ? "detail-gallery-primary" : ""}`} key={item.src}>
+                    <div className="detail-gallery-media">
+                      <Image src={item.src} alt={item.alt} fill loading={index === 0 ? "eager" : "lazy"} sizes={index === 0 ? "(max-width: 820px) 100vw, 52vw" : "(max-width: 560px) 100vw, 26vw"} />
+                    </div>
+                    {productImages.length > 1 && <figcaption>{item.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              <div className="detail-gallery"><div className="detail-gallery-media"><div className="product-fallback">{product.name.slice(0,2).toUpperCase()}</div></div></div>
+            )}
             <div className="detail-panel">
               <p className="label text-[var(--brand-primary)]">{category?.name}</p>
               <h1 className="detail-title display mt-4">{product.name}</h1>

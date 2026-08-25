@@ -22,7 +22,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const items = getProductsByCategory(slug);
   return (
     <>
-      <PageHero title={category.name} copy={category.description} aside={<p className="label text-[var(--brand-primary)]">{items.length} catalogue options</p>} />
+      <PageHero title={category.name} copy={category.description} aside={<p className="label text-[var(--brand-primary)]">{items.length} catalogue {items.length === 1 ? "option" : "options"}</p>} />
       <CategoryRail active={category.slug} />
       <section className="section"><div className="container"><ProductGrid products={items} /><p className="price-note mt-10 max-w-4xl border-t border-[var(--brand-border)] pt-5">Prices and minimum quantities may vary depending on product specification, customization and order requirement. Contact Texa Mart for the final quotation.</p></div></section>
       <CTASection title={`Need custom ${category.shortName.toLowerCase()}?`} copy="Share your quantity, branding requirement and preferred option. We’ll prepare the conversation for a clear quotation." />

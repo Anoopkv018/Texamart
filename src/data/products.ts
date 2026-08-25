@@ -7,6 +7,7 @@ const descriptions = {
   gift: "A useful branded piece for gift sets, events, employee kits and everyday use.",
   drinkware: "Custom drinkware that puts your identity into an object people reach for every day.",
   stationery: "A flexible branded format for events, packaging, team kits and promotions.",
+  sachet: "A custom pageant or event sachet that can be prepared in a selection of colours and finishes.",
   bag: "A reusable carry piece that gives your identity useful, everyday visibility.",
   other: "A custom format for events, recognition, display and memorable brand moments.",
 };
@@ -32,8 +33,6 @@ export const products: Product[] = [
   { id: "wooden-keychain", slug: "wooden-keychain", name: "Wooden Keychain", category: "keychains-gifts", image: "/images/products/keychain.jpg", description: descriptions.gift, priceOptions: [35], moq: 50 },
   { id: "button-keychain", slug: "button-keychain", name: "Button Keychain", category: "keychains-gifts", description: descriptions.gift, priceOptions: [35], moq: 50 },
   { id: "acrylic-keychain", slug: "acrylic-keychain", name: "Acrylic Keychain", category: "keychains-gifts", description: descriptions.gift, priceOptions: [45], moq: 50, featured: true },
-  { id: "metal-pen", slug: "metal-pen", name: "Metal Pen", category: "keychains-gifts", image: "/images/products/pen.jpg", description: descriptions.gift, priceOptions: [65], moq: 50 },
-  { id: "diary", slug: "diary", name: "Diary", category: "keychains-gifts", image: "/images/products/diary.jpg", description: descriptions.gift, priceOptions: [150], moq: 10, featured: true },
   { id: "mementoes", slug: "mementoes", name: "Mementoes", category: "keychains-gifts", description: descriptions.gift, priceOnRequest: true },
 
   { id: "mug", slug: "mug", name: "Mug", category: "drinkware", image: "/images/products/mug.jpg", description: descriptions.drinkware, priceOptions: [160], featured: true },
@@ -41,6 +40,10 @@ export const products: Product[] = [
   { id: "uv-bottle-750ml", slug: "uv-bottle-750ml", name: "UV Bottle — 750 ml", category: "drinkware", image: "/images/products/bottle.jpg", description: descriptions.drinkware, priceOptions: [280], featured: true },
   { id: "uv-bottle-1-litre", slug: "uv-bottle-1-litre", name: "UV Bottle — 1 Litre", category: "drinkware", image: "/images/products/bottle.jpg", description: descriptions.drinkware, priceOptions: [320] },
 
+  { id: "diary", slug: "diary", name: "Diary", category: "stationery", image: "/images/products/diary-black.webp", description: descriptions.stationery, priceOptions: [150], moq: 10, featured: true },
+  { id: "metal-pen", slug: "metal-pen", name: "Custom Metal Pen", category: "stationery", image: "/images/products/metal-pen-detail.webp", gallery: [
+    { src: "/images/products/metal-pen-customisation.webp", alt: "Black metal pen showing engraving positions on both sides", caption: "Custom engraving preview" },
+  ], description: descriptions.stationery, priceOptions: [65], moq: 50 },
   { id: "uv-stickers", slug: "uv-stickers", name: "UV Stickers", category: "stationery", description: descriptions.stationery, priceOptions: [30], pricingNote: "Client artwork also references approximately ₹4.25 per sq inch; confirm final specification." },
   { id: "bookmark", slug: "bookmark", name: "Bookmark", category: "stationery", description: descriptions.stationery, priceOptions: [4.5] },
   { id: "post-card", slug: "post-card", name: "Post Card", category: "stationery", description: descriptions.stationery, priceOptions: [8] },
@@ -48,6 +51,11 @@ export const products: Product[] = [
   { id: "button-badge", slug: "button-badge", name: "Button Badge", category: "stationery", description: descriptions.stationery, priceOptions: [20, 25], pricingNote: "₹20 — MOQ 100 · ₹25 — MOQ 50. Option details to be confirmed." },
   { id: "sticker-a5-custom-cut", slug: "sticker-a5-custom-cut", name: "Sticker A5 — Custom Cut", category: "stationery", description: descriptions.stationery, priceOptions: [40], moq: 100 },
   { id: "lanyard-tag", slug: "lanyard-tag", name: "Lanyard Tag", category: "stationery", description: descriptions.stationery, priceOptions: [35] },
+
+  { id: "miss-india-sachet", slug: "miss-india-sachet", name: "Miss India Sachet", category: "sachets", image: "/images/products/sachet-white.webp", gallery: [
+    { src: "/images/products/sachet-blue-gold-options.webp", alt: "White, blue and gold sachets displayed on black dress forms", caption: "White, blue and gold options" },
+    { src: "/images/products/sachet-red-gold-options.webp", alt: "White, red and gold sachets displayed on black dress forms", caption: "White, red and gold options" },
+  ], description: descriptions.sachet, priceOptions: [160] },
 
   { id: "tote-bag", slug: "tote-bag", name: "Tote Bag", category: "bags-accessories", image: "/images/products/tote-bag.jpg", description: descriptions.bag, priceOptions: [12.5, 16.5, 55, 75, 125, 170], featured: true },
   { id: "jute-bag", slug: "jute-bag", name: "Jute Bag", category: "bags-accessories", description: descriptions.bag, priceOptions: [60, 90, 110, 160] },
@@ -58,7 +66,6 @@ export const products: Product[] = [
 
   { id: "custom-flags", slug: "custom-flags", name: "Custom Flags", category: "other-products", image: "/images/products/custom-flag.jpg", description: descriptions.other, priceOptions: [60, 400, 600], featured: true },
   { id: "fabric-frame", slug: "fabric-frame", name: "Fabric Frame", category: "other-products", description: descriptions.other, priceOptions: [150] },
-  { id: "miss-india-sachet", slug: "miss-india-sachet", name: "Miss India Sachet", category: "other-products", description: descriptions.other, priceOptions: [160] },
   { id: "umbrella", slug: "umbrella", name: "Umbrella", category: "other-products", image: "/images/products/umbrella.jpg", description: descriptions.other, priceOptions: [200] },
   { id: "recognition-mementoes", slug: "recognition-mementoes", name: "Mementoes", category: "other-products", description: descriptions.other, priceOnRequest: true },
 ];
