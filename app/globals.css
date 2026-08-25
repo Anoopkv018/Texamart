@@ -224,6 +224,19 @@ img { max-width: 100%; }
 .detail-gallery-multiple .detail-gallery-primary { grid-column: 1 / -1; }
 .detail-gallery-multiple .detail-gallery-primary .detail-gallery-media { min-height: 32rem; }
 .detail-gallery-item figcaption { padding: .7rem .8rem; color: var(--brand-muted); font-size: .72rem; font-weight: 650; line-height: 1.35; }
+.product-gallery { position: sticky; top: 6rem; min-width: 0; }
+.product-gallery-stage { overflow: hidden; background: var(--brand-white); border-radius: var(--radius-media); box-shadow: 0 1px 0 rgba(31,27,100,.1); }
+.product-gallery-media { height: clamp(24rem,42vw,32rem); position: relative; overflow: hidden; background: var(--brand-surface); }
+.product-gallery-media img { object-fit: contain; padding: clamp(1.25rem,3vw,2.5rem); mix-blend-mode: multiply; }
+.product-gallery.true-color-images .product-gallery-media img,
+.product-gallery.true-color-images .product-gallery-thumbnail img { mix-blend-mode: normal; }
+.product-gallery-caption { min-height: 2.6rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .65rem .8rem; color: var(--brand-muted); font-size: .75rem; font-weight: 650; line-height: 1.35; }
+.product-gallery-count { flex: 0 0 auto; color: var(--brand-primary); font-variant-numeric: tabular-nums; }
+.product-gallery-thumbnails { display: flex; gap: .75rem; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: .125rem; scroll-snap-type: x proximity; padding: .75rem .125rem .4rem; }
+.product-gallery-thumbnail { width: 4.75rem; min-width: 4.75rem; aspect-ratio: 1; position: relative; overflow: hidden; padding: 0; border: 2px solid var(--brand-border); background: var(--brand-white); border-radius: var(--radius-media); scroll-snap-align: start; transition: border-color .2s ease, background .2s ease; }
+.product-gallery-thumbnail img { object-fit: contain; padding: .35rem; mix-blend-mode: multiply; }
+.product-gallery-thumbnail:hover { border-color: var(--brand-primary); background: var(--brand-background); }
+.product-gallery-thumbnail[aria-pressed="true"] { border-color: var(--brand-primary); background: var(--brand-primary-soft); }
 .detail-panel { padding-top: .75rem; }
 .detail-title { font-size: clamp(2.75rem,4.8vw,4.65rem); }
 .price-options { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
@@ -306,6 +319,8 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .story-art { min-height: 26rem; }
   .detail-gallery { position: relative; top: auto; }
   .detail-gallery-media { min-height: 29rem; }
+  .product-gallery { position: relative; top: auto; }
+  .product-gallery-media { height: clamp(22rem,58vw,28rem); }
   .category-mosaic, .product-rail, .catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .footer-grid { grid-template-columns: 1.2fr 1fr 1fr; }
   .footer-grid > div:first-child { grid-column: 1/-1; }
@@ -353,6 +368,9 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .detail-gallery-multiple .detail-gallery-primary .detail-gallery-media { min-height: 25rem; }
   .detail-gallery-multiple { grid-template-columns: 1fr; }
   .detail-gallery-multiple .detail-gallery-primary { grid-column: auto; }
+  .product-gallery-media { height: clamp(19rem,82vw,23rem); }
+  .product-gallery-thumbnails { gap: .625rem; }
+  .product-gallery-thumbnail { width: 4.25rem; min-width: 4.25rem; }
   .form-grid { grid-template-columns: 1fr; }
   .field.full { grid-column: auto; }
   .gift-selector { grid-template-columns: 1fr 1fr; }
@@ -373,6 +391,6 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .marquee-track { animation: none; transform: none; }
-  .product-card, .product-card-image, .product-card-image img, .detail-gallery-media img, .category-art, .floating-whatsapp, .button-primary, .button-secondary, .button-light { transition-duration: .01ms; }
+  .product-card, .product-card-image, .product-card-image img, .detail-gallery-media img, .product-gallery-thumbnail, .category-art, .floating-whatsapp, .button-primary, .button-secondary, .button-light { transition-duration: .01ms; }
   .product-card:hover, .product-card:hover .product-card-image img, .detail-gallery-item:hover .detail-gallery-media img, .floating-whatsapp:hover, .button-primary:hover, .button-secondary:hover, .button-light:hover { transform: none; }
 }
