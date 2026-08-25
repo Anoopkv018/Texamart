@@ -4,6 +4,7 @@ import { ArrowDownRight, ArrowRight, MessageCircle, Sparkles } from "lucide-reac
 import { categories } from "@/src/data/categories";
 import { featuredProducts } from "@/src/data/products";
 import { ProductCard } from "@/src/components/products/ProductCard";
+import { ProductConstellation } from "@/src/components/ProductConstellation";
 import { Reveal } from "@/src/components/motion/Reveal";
 import { CTASection } from "@/src/components/CTASection";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
@@ -28,12 +29,7 @@ export default function Home() {
             <Reveal delay={.28} className="hero-actions"><Link href="/products" className="button-primary">Explore products <ArrowRight size={18} /></Link><a href={createWhatsAppUrl(buildGeneralEnquiryMessage())} target="_blank" rel="noreferrer" className="button-secondary">Get a WhatsApp quote <MessageCircle size={18} /></a></Reveal>
             <Reveal delay={.36} className="hero-stamp"><span className="grid h-10 w-10 place-items-center border border-current"><Sparkles size={17} /></span><span className="label">Wear it · Carry it · Remember it</span></Reveal>
           </div>
-          <Reveal delay={.22} className="hero-stage" >
-            <div className="floating-product hero-shirt asset-photo"><Image src="/images/products/round-neck-tshirt.jpg" alt="Custom round neck T-shirt" fill loading="eager" sizes="(max-width: 820px) 50vw, 28vw" /></div>
-            <div className="floating-product hero-bottle asset-photo"><Image src="/images/products/bottle.jpg" alt="Custom UV bottle" fill loading="eager" sizes="16vw" /></div>
-            <div className="floating-product hero-cap asset-photo"><Image src="/images/products/cap.jpg" alt="Custom cap" fill loading="eager" sizes="18vw" /></div>
-            <div className="floating-product hero-mug asset-photo"><Image src="/images/products/mug.jpg" alt="Custom mug" fill loading="eager" sizes="16vw" /></div>
-          </Reveal>
+          <Reveal delay={.22} className="hero-stage"><ProductConstellation variant="apparel" /></Reveal>
         </div>
       </section>
 
@@ -94,12 +90,7 @@ export default function Home() {
             <p className="body-large mt-7">Combine a bottle, diary, pen, mug, tote, keychain, backpack or cap into a considered gift set. Pick the starting pieces and let Texa Mart help shape the final requirement.</p>
             <Link className="button-primary mt-8" href="/corporate-gifts">Plan your corporate gift set <ArrowRight size={18} /></Link>
           </Reveal>
-          <Reveal delay={.1} className="gift-collage">
-            <div className="gift-collage-item"><Image src="/images/products/diary.jpg" alt="Diary" fill sizes="22vw" /></div>
-            <div className="gift-collage-item"><Image src="/images/products/bottle.jpg" alt="Bottle" fill sizes="16vw" /></div>
-            <div className="gift-collage-item"><Image src="/images/products/mug.jpg" alt="Mug" fill sizes="17vw" /></div>
-            <div className="gift-collage-item"><Image src="/images/products/pen.jpg" alt="Pen" fill sizes="21vw" /></div>
-          </Reveal>
+          <Reveal delay={.1}><ProductConstellation variant="gifts" /></Reveal>
         </div>
       </section>
 
