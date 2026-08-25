@@ -21,7 +21,7 @@ export function Footer() {
           </div>
           <div>
             <p className="footer-heading label mb-5">Company</p>
-            <div className="grid gap-3"><Link href="/custom-printing">Custom Printing</Link><Link href="/corporate-gifts">Corporate Gifts</Link><Link href="/gallery">Gallery</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></div>
+            <div className="grid gap-3"><Link href="/custom-printing">Custom Printing</Link><Link href="/corporate-gifts">Corporate Gifts</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></div>
           </div>
           <div>
             <p className="footer-heading label mb-5">Contact</p>

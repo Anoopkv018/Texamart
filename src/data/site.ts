@@ -18,7 +18,6 @@ export const navigation = [
   { label: "Products", href: "/products" },
   { label: "Custom Printing", href: "/custom-printing" },
   { label: "Corporate Gifts", href: "/corporate-gifts" },
-  { label: "Gallery", href: "/gallery" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
