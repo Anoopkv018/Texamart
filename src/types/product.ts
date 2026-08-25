@@ -21,6 +21,7 @@ export type Product = {
   name: string;
   category: ProductCategory;
   image?: string;
+  cardImage?: string;
   gallery?: ProductImage[];
   description: string;
   priceOptions?: number[];

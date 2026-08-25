@@ -14,7 +14,13 @@ const descriptions = {
 
 export const products: Product[] = [
   { id: "round-neck-tshirt", slug: "round-neck-tshirt", name: "Round Neck T-Shirt", category: "apparel", image: "/images/products/round-neck-tshirt.jpg", description: descriptions.apparel, priceOptions: [75, 200, 300], featured: true },
-  { id: "collar-tshirt", slug: "collar-tshirt", name: "Collar T-Shirt", category: "apparel", description: descriptions.apparel, priceOptions: [150, 220, 450], featured: true },
+  { id: "collar-tshirt", slug: "collar-tshirt", name: "Collar T-Shirt", category: "apparel", image: "/images/products/collar-tshirt-front.webp", cardImage: "/images/products/collar-tshirt-detail.webp", gallery: [
+    { src: "/images/products/collar-tshirt-side.webp", alt: "Model wearing the green collar T-shirt from the side", caption: "Side view" },
+    { src: "/images/products/collar-tshirt-angle.webp", alt: "Model wearing the green collar T-shirt at a three-quarter angle", caption: "Three-quarter view" },
+    { src: "/images/products/collar-tshirt-back.webp", alt: "Back view of the green collar T-shirt", caption: "Back view" },
+    { src: "/images/products/collar-tshirt-detail.webp", alt: "Close view of the green collar, buttons and fabric texture", caption: "Collar and fabric detail" },
+    { src: "/images/products/collar-tshirt-lifestyle.webp", alt: "Full-length lifestyle view of the green collar T-shirt", caption: "Lifestyle view" },
+  ], description: descriptions.apparel, priceOptions: [150, 220, 450], featured: true },
   { id: "sweat-shirts", slug: "sweat-shirts", name: "Sweat Shirts", category: "apparel", description: descriptions.apparel, priceOptions: [400, 450] },
   { id: "hoodies", slug: "hoodies", name: "Hoodies", category: "apparel", image: "/images/products/hoodie.jpg", description: descriptions.apparel, priceOptions: [450, 550, 650], featured: true },
   { id: "pants", slug: "pants", name: "Pants", category: "apparel", description: descriptions.apparel, priceOptions: [495] },
