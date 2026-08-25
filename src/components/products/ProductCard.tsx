@@ -10,11 +10,10 @@ export function ProductCard({ product }: { product: Product }) {
   const category = getCategory(product.category);
   const href = `/products/${product.category}/${product.slug}`;
   const quote = createWhatsAppUrl(buildProductEnquiryMessage({ product }));
-  const cardImage = product.cardImage ?? product.image;
   return (
-    <article className="product-card">
+    <article className={`product-card ${product.preserveImageColors ? "true-color-images" : ""}`}>
       <Link href={href} className="product-card-image" aria-label={`View ${product.name}`}>
-        {cardImage ? <Image src={cardImage} alt={product.name} fill sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" /> : <div className="product-fallback" aria-hidden="true">{product.name.slice(0,2).toUpperCase()}</div>}
+        {product.image ? <Image src={product.image} alt={product.name} fill sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" /> : <div className="product-fallback" aria-hidden="true">{product.name.slice(0,2).toUpperCase()}</div>}
       </Link>
       <div className="product-card-body">
         <p className="label text-[var(--brand-muted)]">{category?.name}</p>

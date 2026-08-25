@@ -36,7 +36,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           <Link href={`/products/${product.category}`} className="mb-8 inline-flex items-center gap-2 text-sm font-extrabold text-[var(--brand-primary)]"><ArrowLeft size={16} /> Back to {category?.name}</Link>
           <div className="detail-grid">
             {productImages.length > 0 ? (
-              <div className={`detail-gallery ${productImages.length > 1 ? "detail-gallery-multiple" : ""}`}>
+              <div className={`detail-gallery ${productImages.length > 1 ? "detail-gallery-multiple" : ""} ${product.preserveImageColors ? "true-color-images" : ""}`}>
                 {productImages.map((item, index) => (
                   <figure className={`detail-gallery-item ${index === 0 ? "detail-gallery-primary" : ""}`} key={item.src}>
                     <div className="detail-gallery-media">

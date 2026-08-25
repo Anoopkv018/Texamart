@@ -14,7 +14,7 @@ const descriptions = {
 
 export const products: Product[] = [
   { id: "round-neck-tshirt", slug: "round-neck-tshirt", name: "Round Neck T-Shirt", category: "apparel", image: "/images/products/round-neck-tshirt.jpg", description: descriptions.apparel, priceOptions: [75, 200, 300], featured: true },
-  { id: "collar-tshirt", slug: "collar-tshirt", name: "Collar T-Shirt", category: "apparel", image: "/images/products/collar-tshirt-front.webp", cardImage: "/images/products/collar-tshirt-detail.webp", gallery: [
+  { id: "collar-tshirt", slug: "collar-tshirt", name: "Collar T-Shirt", category: "apparel", image: "/images/products/collar-tshirt-front.webp", preserveImageColors: true, gallery: [
     { src: "/images/products/collar-tshirt-side.webp", alt: "Model wearing the green collar T-shirt from the side", caption: "Side view" },
     { src: "/images/products/collar-tshirt-angle.webp", alt: "Model wearing the green collar T-shirt at a three-quarter angle", caption: "Three-quarter view" },
     { src: "/images/products/collar-tshirt-back.webp", alt: "Back view of the green collar T-shirt", caption: "Back view" },
