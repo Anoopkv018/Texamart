@@ -1,6 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, MessageCircle, Sparkles } from "lucide-react";
+import {
+  ArrowDownRight,
+  ArrowRight,
+  CupSoda,
+  HardHat,
+  KeyRound,
+  Magnet,
+  MessageCircle,
+  NotebookPen,
+  Ribbon,
+  Shapes,
+  Shirt,
+  ShoppingBag,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
 import { categories } from "@/src/data/categories";
 import { featuredProducts } from "@/src/data/products";
 import { ProductCard } from "@/src/components/products/ProductCard";
@@ -8,6 +23,7 @@ import { ProductConstellation } from "@/src/components/ProductConstellation";
 import { Reveal } from "@/src/components/motion/Reveal";
 import { CTASection } from "@/src/components/CTASection";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
+import type { ProductCategory } from "@/src/types/product";
 
 const marquee = ["CUSTOM APPAREL", "CORPORATE GIFTS", "MERCHANDISE", "CUSTOM PRINTING", "BULK ORDERS", "BRANDED PRODUCTS"];
 const steps = [
@@ -16,6 +32,18 @@ const steps = [
   ["Get your quote", "Texa Mart confirms pricing and order details directly through WhatsApp."],
   ["Confirm your order", "Continue the final order discussion with the Texa Mart team."],
 ];
+
+const categoryIcons = {
+  apparel: Shirt,
+  caps: HardHat,
+  "fridge-magnets": Magnet,
+  "keychains-gifts": KeyRound,
+  drinkware: CupSoda,
+  stationery: NotebookPen,
+  sachets: Ribbon,
+  "bags-accessories": ShoppingBag,
+  "other-products": Shapes,
+} satisfies Record<ProductCategory, LucideIcon>;
 
 export default function Home() {
   return (
@@ -43,15 +71,25 @@ export default function Home() {
             <Reveal><h2 className="section-title display">Everything your brand can wear, carry & share.</h2></Reveal>
             <Reveal delay={.08}><Link href="/products" className="button-secondary">Browse the full catalogue <ArrowRight size={18} /></Link></Reveal>
           </div>
-          <div className="category-mosaic">
-            {categories.map((category, index) => (
-              <Reveal key={category.slug} className={`category-tile tone-${category.tone}`} delay={(index % 3) * .05}>
-                <Link href={`/products/${category.slug}`} className="absolute inset-0 z-10" aria-label={`Explore ${category.name}`} />
-                <div className="category-top"><h3 className="category-name">{category.name}</h3><ArrowDownRight /></div>
-                {category.image && <div className="category-art"><Image src={category.image} alt="" fill sizes="(max-width: 820px) 100vw, 55vw" /></div>}
-              </Reveal>
-            ))}
-          </div>
+          <nav className="category-mosaic" aria-label="Product categories">
+            {categories.map((category, index) => {
+              const CategoryIcon = categoryIcons[category.slug];
+
+              return (
+                <Reveal key={category.slug} className={`category-tile tone-${category.tone}`} delay={(index % 3) * .05}>
+                  <Link href={`/products/${category.slug}`} className="category-link" aria-label={`Explore ${category.name}`}>
+                    <div className="category-top">
+                      <h3 className="category-name">{category.name}</h3>
+                      <ArrowDownRight className="category-arrow" aria-hidden="true" />
+                    </div>
+                    <span className="category-icon" aria-hidden="true">
+                      <CategoryIcon focusable="false" />
+                    </span>
+                  </Link>
+                </Reveal>
+              );
+            })}
+          </nav>
         </div>
       </section>
 
@@ -63,7 +101,7 @@ export default function Home() {
         <div className="product-rail">{featuredProducts.map((product) => <ProductCard product={product} key={product.id} />)}</div>
       </section>
 
-      <section className="section">
+      {/* <section className="section">
         <div className="container story-grid">
           <Reveal className="story-art"><Image src="/images/source/product-catalogue.jpg" alt="Texa Mart supplied custom products catalogue" fill sizes="(max-width: 820px) 100vw, 42vw" /></Reveal>
           <Reveal delay={.1}>
@@ -73,7 +111,7 @@ export default function Home() {
             <Link href="/custom-printing" className="button-primary mt-8">See the customization journey <ArrowRight size={18} /></Link>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       <section className="ink-section section">
         <div className="container process">

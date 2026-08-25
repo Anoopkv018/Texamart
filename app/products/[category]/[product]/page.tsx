@@ -9,6 +9,7 @@ import { siteConfig } from "@/src/data/site";
 import { buildProductEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
 import { PriceDisplay } from "@/src/components/products/PriceDisplay";
 import { ProductCard } from "@/src/components/products/ProductCard";
+import { ProductGallery } from "@/src/components/products/ProductGallery";
 import { CTASection } from "@/src/components/CTASection";
 
 export function generateStaticParams() { return products.map((product) => ({ category: product.category, product: product.slug })); }
@@ -36,16 +37,20 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           <Link href={`/products/${product.category}`} className="mb-8 inline-flex items-center gap-2 text-sm font-extrabold text-[var(--brand-primary)]"><ArrowLeft size={16} /> Back to {category?.name}</Link>
           <div className="detail-grid">
             {productImages.length > 0 ? (
-              <div className={`detail-gallery ${productImages.length > 1 ? "detail-gallery-multiple" : ""} ${product.preserveImageColors ? "true-color-images" : ""}`}>
-                {productImages.map((item, index) => (
-                  <figure className={`detail-gallery-item ${index === 0 ? "detail-gallery-primary" : ""}`} key={item.src}>
-                    <div className="detail-gallery-media">
-                      <Image src={item.src} alt={item.alt} fill loading={index === 0 ? "eager" : "lazy"} sizes={index === 0 ? "(max-width: 820px) 100vw, 52vw" : "(max-width: 560px) 100vw, 26vw"} />
-                    </div>
-                    {productImages.length > 1 && <figcaption>{item.caption}</figcaption>}
-                  </figure>
-                ))}
-              </div>
+              product.galleryDisplay === "thumbnails" ? (
+                <ProductGallery key={product.id} images={productImages} preserveImageColors={product.preserveImageColors} />
+              ) : (
+                <div className={`detail-gallery ${productImages.length > 1 ? "detail-gallery-multiple" : ""} ${product.preserveImageColors ? "true-color-images" : ""}`}>
+                  {productImages.map((item, index) => (
+                    <figure className={`detail-gallery-item ${index === 0 ? "detail-gallery-primary" : ""}`} key={item.src}>
+                      <div className="detail-gallery-media">
+                        <Image src={item.src} alt={item.alt} fill loading={index === 0 ? "eager" : "lazy"} sizes={index === 0 ? "(max-width: 820px) 100vw, 52vw" : "(max-width: 560px) 100vw, 26vw"} />
+                      </div>
+                      {productImages.length > 1 && <figcaption>{item.caption}</figcaption>}
+                    </figure>
+                  ))}
+                </div>
+              )
             ) : (
               <div className="detail-gallery"><div className="detail-gallery-media"><div className="product-fallback">{product.name.slice(0,2).toUpperCase()}</div></div></div>
             )}

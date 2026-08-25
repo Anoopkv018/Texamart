@@ -6,7 +6,7 @@ export const categories: Category[] = [
     name: "Apparel",
     shortName: "Apparel",
     description: "T-shirts, sweatshirts, hoodies and everyday teamwear ready for your identity.",
-    image: "/images/products/round-neck-tshirt.jpg",
+    image: "/images/products/round-neck-tshirt-front.webp",
     tone: "cream",
   },
   {
@@ -14,7 +14,7 @@ export const categories: Category[] = [
     name: "Caps",
     shortName: "Caps",
     description: "Smart, flexible, foldable and premium caps for teams, events and campaigns.",
-    image: "/images/products/cap.jpg",
+    image: "/images/products/smart-caps.webp",
     tone: "ink",
   },
   {
@@ -22,7 +22,7 @@ export const categories: Category[] = [
     name: "Fridge Magnets",
     shortName: "Magnets",
     description: "Small-format branded keepsakes that stay visible long after the moment.",
-    image: "/images/products/fridge-magnet.jpg",
+    image: "/images/products/metal-fridge-magnet.webp",
     tone: "paper",
   },
   {
@@ -30,7 +30,7 @@ export const categories: Category[] = [
     name: "Keychains & Gifts",
     shortName: "Keychains & Gifts",
     description: "Useful desk and pocket pieces, from custom keychains to recognition mementoes.",
-    image: "/images/products/keychain.jpg",
+    image: "/images/products/wooden-keychain.webp",
     tone: "blue",
   },
   {
@@ -38,7 +38,7 @@ export const categories: Category[] = [
     name: "Drinkware",
     shortName: "Drinkware",
     description: "Mugs and UV bottles made for daily routines and visible brand recall.",
-    image: "/images/products/bottle.jpg",
+    image: "/images/products/uv-bottle-500ml.webp",
     tone: "ink",
   },
   {
@@ -46,7 +46,7 @@ export const categories: Category[] = [
     name: "Stickers, Badges & Stationery",
     shortName: "Stationery",
     description: "Custom diaries, pens, stickers and branded desk essentials for teams, events and gifting.",
-    image: "/images/products/diary-black.webp",
+    image: "/images/products/diary.webp",
     tone: "paper",
   },
   {
@@ -54,7 +54,7 @@ export const categories: Category[] = [
     name: "Sachets & Sashes",
     shortName: "Sachets",
     description: "Custom pageant and event sachets available in a selection of colours and finishes.",
-    image: "/images/products/sachet-white.webp",
+    image: "/images/products/miss-india-sachet.webp",
     tone: "cream",
   },
   {
@@ -62,7 +62,7 @@ export const categories: Category[] = [
     name: "Bags & Accessories",
     shortName: "Bags",
     description: "Totes, jute bags, pouches, backpacks and carry pieces designed to travel.",
-    image: "/images/products/tote-bag.jpg",
+    image: "/images/products/tote-bag.webp",
     tone: "cream",
   },
   {
@@ -70,7 +70,7 @@ export const categories: Category[] = [
     name: "Other Products",
     shortName: "Other",
     description: "Flags, fabric frames, umbrellas and custom formats for the brief beyond the usual.",
-    image: "/images/products/custom-flag.jpg",
+    image: "/images/products/custom-flags.webp",
     tone: "blue",
   },
 ];

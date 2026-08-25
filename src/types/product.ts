@@ -22,6 +22,7 @@ export type Product = {
   category: ProductCategory;
   image?: string;
   preserveImageColors?: boolean;
+  galleryDisplay?: "grid" | "thumbnails";
   gallery?: ProductImage[];
   description: string;
   priceOptions?: number[];
