@@ -22,6 +22,8 @@ Texa Mart's website makes its merchandise catalogue easy to explore and turns pr
 
 Texa Mart presents custom merchandise as a premium brand medium: things people can wear, carry, use, and remember, with quotation and order details completed directly through WhatsApp.
 
+TEXA T-Shirts is a Mysuru-based custom apparel and garment brand serving businesses, institutions, schools, events, teams, brands and individuals. Its confirmed apparel offer includes custom and polo T-shirts, corporate and promotional apparel, school and institutional apparel, sports and event T-shirts, hoodies, sweatshirts, caps, printed and embroidered apparel, and customized or bulk garment orders.
+
 ## Operating Context
 
 Visitors browse by category or product, review pricing and minimum quantities where supplied, select product or gift-set options, then send a preformatted enquiry to Texa Mart on WhatsApp. The site is a catalogue and lead-generation experience, not an ecommerce store.
@@ -29,6 +31,7 @@ Visitors browse by category or product, review pricing and minimum quantities wh
 ## Capabilities and Constraints
 
 - Primary phone and WhatsApp: +91 9036889843 / 919036889843.
+- Confirmed location: Mysuru, Karnataka. No street address has been supplied.
 - No cart, checkout, payment, customer account, inventory, stock status, fake reviews, or ecommerce backend.
 - Product, category, price, MOQ, contact, and image information must be centrally editable and data driven.
 - Multiple unexplained prices must remain neutral "price options"; their meanings must not be invented.
@@ -46,6 +49,7 @@ Visitors browse by category or product, review pricing and minimum quantities wh
 - Preserve the supplied Texa Mart logo without redesigning, distorting, or recolouring it.
 - Use the logo's sampled navy/indigo as the primary colour with white, warm off-white, lighter brand tones, and restrained neutrals.
 - Voice is confident, concise, contemporary, human, and brand-oriented.
+- Confirmed apparel commitment: "Quality Products. Honest Service. Reliable Delivery." and "Wear Your Identity."
 - Visual direction: premium merchandise brand, modern manufacturing company, and editorial fashion catalogue; large typography, strong negative space, asymmetry, product cut-outs, refined motion, and varied compositions.
 - Avoid generic SaaS styling, unrelated gradients, excessive cards/pills/radii, fake proof, and repetitive template sections.
 

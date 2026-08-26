@@ -9,6 +9,7 @@ import { siteConfig } from "@/src/data/site";
 import { buildProductEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
 import { PriceDisplay } from "@/src/components/products/PriceDisplay";
 import { ProductCard } from "@/src/components/products/ProductCard";
+import { ColourAvailability } from "@/src/components/products/ColourAvailability";
 import { ProductGallery } from "@/src/components/products/ProductGallery";
 import { CTASection } from "@/src/components/CTASection";
 
@@ -61,6 +62,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
               <div className="mt-8"><PriceDisplay product={product} detailed /></div>
               {product.moq && <p className="mt-4 inline-flex bg-[var(--brand-primary-soft)] px-3 py-2 text-sm font-extrabold text-[var(--brand-primary)]">Minimum order quantity: {product.moq}</p>}
               {product.pricingNote && <p className="price-note mt-5 border-l border-[var(--brand-primary)] pl-4">{product.pricingNote}</p>}
+              {product.availableColours && <ColourAvailability colours={product.availableColours} />}
               <div className="detail-list">
                 <p className="label text-[var(--brand-muted)]">Product highlights</p>
                 <ul className="grid gap-3">

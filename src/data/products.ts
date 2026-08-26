@@ -1,4 +1,27 @@
-import type { Product } from "@/src/types/product";
+import type { Product, ProductColour } from "@/src/types/product";
+
+const catalogueColours = {
+  1: { catalogueCode: 1, name: "Navy", hex: "#07101f" },
+  2: { catalogueCode: 2, name: "White", hex: "#f8f5f2" },
+  3: { catalogueCode: 3, name: "A Melange", hex: "#c7c7cc" },
+  4: { catalogueCode: 4, name: "B Green", hex: "#123728" },
+  5: { catalogueCode: 5, name: "Sea Green", hex: "#3eb9b1" },
+  6: { catalogueCode: 6, name: "Maroon", hex: "#721528" },
+  9: { catalogueCode: 9, name: "Yellow", hex: "#f2ef19" },
+  10: { catalogueCode: 10, name: "G Melange", hex: "#a5a7a6" },
+  11: { catalogueCode: 11, name: "Black", hex: "#101516" },
+  12: { catalogueCode: 12, name: "Wine", hex: "#32121e" },
+  16: { catalogueCode: 16, name: "Grey", hex: "#969997" },
+  17: { catalogueCode: 17, name: "Red", hex: "#bd1f2b" },
+  18: { catalogueCode: 18, name: "Royal", hex: "#293b9b" },
+  21: { catalogueCode: 21, name: "Gold", hex: "#f4c20d" },
+  22: { catalogueCode: 22, name: "P Green", hex: "#2b7a2f" },
+  26: { catalogueCode: 26, name: "Black Melange", hex: "#33403e" },
+} satisfies Record<number, ProductColour>;
+
+function colours(...codes: Array<keyof typeof catalogueColours>) {
+  return codes.map((code) => catalogueColours[code]);
+}
 
 const descriptions = {
   apparel: "A versatile custom apparel option for teams, events, campaigns and brand merchandise.",
@@ -20,7 +43,7 @@ export const products: Product[] = [
       { src: "/images/products/round-neck-tshirt-front.webp", alt: "Front view of the round neck T-shirt", caption: "Front view" },
       { src: "/images/products/round-neck-tshirt-back.webp", alt: "Back view of the round neck T-shirt", caption: "Back view" },
       { src: "/images/products/round-neck-tshirt-detail.webp", alt: "Close view of the round neckline and fabric texture", caption: "Neckline and fabric detail" },
-    ], description: descriptions.apparel, priceOptions: [75, 200, 300], featured: true
+    ], availableColours: colours(1, 2, 10, 11, 17), description: descriptions.apparel, priceOptions: [75, 200, 300], featured: true
   },
   {
     id: "collar-tshirt", slug: "collar-tshirt", name: "Collar T-Shirt", category: "apparel", image: "/images/products/collar-tshirt-front.webp", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
@@ -29,7 +52,7 @@ export const products: Product[] = [
       { src: "/images/products/collar-tshirt-back.webp", alt: "Back view of the green collar T-shirt", caption: "Back view" },
       { src: "/images/products/collar-tshirt-detail.webp", alt: "Close view of the green collar, buttons and fabric texture", caption: "Collar and fabric detail" },
       { src: "/images/products/collar-tshirt-lifestyle.webp", alt: "Full-length lifestyle view of the green collar T-shirt", caption: "Lifestyle view" },
-    ], description: descriptions.apparel, priceOptions: [150, 220, 450], featured: true
+    ], availableColours: colours(1, 2, 3, 4, 5, 6, 12, 16, 9, 11, 18, 10, 21, 22, 26, 17), description: descriptions.apparel, priceOptions: [150, 220, 450], featured: true
   },
   { id: "sweat-shirts", slug: "sweat-shirts", name: "Sweat Shirts", category: "apparel",
     image: "/images/products/sweat-shirts-front.png", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
@@ -38,7 +61,7 @@ export const products: Product[] = [
       { src: "/images/products/sweat-shirts-back.png", alt: "Back view of the black sweat shirt", caption: "Back view" },
       { src: "/images/products/sweat-shirts-detail.png", alt: "Close view of the black sweat shirt, buttons and fabric texture", caption: "Sweat shirt and fabric detail" },
       { src: "/images/products/sweat-shirts-lifestyle.png", alt: "Full-length lifestyle view of the black sweat shirt", caption: "Lifestyle view" },
-    ], description: descriptions.apparel, priceOptions: [400, 450] },
+    ], availableColours: colours(1, 2, 10, 11), description: descriptions.apparel, priceOptions: [400, 450] },
   {
     id: "hoodies", slug: "hoodies", name: "Hoodies", category: "apparel", image: "/images/products/hoodie-front.webp", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
       { src: "/images/products/hoodie-lifestyle.webp", alt: "Full-length lifestyle view of the black hoodie", caption: "Lifestyle view" },
@@ -46,9 +69,9 @@ export const products: Product[] = [
       { src: "/images/products/hoodie-back.webp", alt: "Back view of the black hoodie", caption: "Back view" },
       { src: "/images/products/hoodie-hood-up.webp", alt: "Model wearing the black hoodie with the hood up", caption: "Hood-up view" },
       { src: "/images/products/hoodie-detail.webp", alt: "Close view of the black hood and fabric texture", caption: "Hood and fabric detail" },
-    ], description: descriptions.apparel, priceOptions: [450, 550, 650], featured: true
+    ], availableColours: colours(1, 2, 10, 11, 21), description: descriptions.apparel, priceOptions: [450, 550, 650], featured: true
   },
-  { id: "pants", slug: "pants", name: "Pants", category: "apparel", image: "/images/products/pants.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.apparel, priceOptions: [495] },
+  { id: "pants", slug: "pants", name: "Pants", category: "apparel", image: "/images/products/pants.webp", preserveImageColors: true, galleryDisplay: "thumbnails", availableColours: colours(1, 2, 10, 11, 21), description: descriptions.apparel, priceOptions: [495] },
 
   {
     id: "smart-caps", slug: "smart-caps", name: "Smart Caps", category: "caps", image: "/images/products/smart-caps.webp", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
@@ -100,7 +123,7 @@ export const products: Product[] = [
     ], description: descriptions.sachet, priceOptions: [160]
   },
 
-  { id: "tote-bag", slug: "tote-bag", name: "Tote Bag", category: "bags-accessories", image: "/images/products/tote-bag.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.bag, priceOptions: [12.5, 16.5, 55, 75, 125, 170], featured: true },
+  { id: "tote-bag", slug: "tote-bag", name: "Tote Bag", category: "bags-accessories", image: "/images/products/tote-bag.webp", preserveImageColors: true, galleryDisplay: "thumbnails", availableColours: colours(1, 2), description: descriptions.bag, priceOptions: [12.5, 16.5, 55, 75, 125, 170], featured: true },
   { id: "jute-bag", slug: "jute-bag", name: "Jute Bag", category: "bags-accessories", image: "/images/products/jute-bag.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.bag, priceOptions: [60, 90, 110, 160] },
   { id: "jute-pouch", slug: "jute-pouch", name: "Jute Pouch", category: "bags-accessories", image: "/images/products/jute-pouch.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.bag, priceOptions: [8.5, 12.5, 14.5] },
   { id: "yoga-bag", slug: "yoga-bag", name: "Yoga Bag", category: "bags-accessories", description: descriptions.bag, priceOptions: [260] },

@@ -15,6 +15,12 @@ export type ProductImage = {
   caption?: string;
 };
 
+export type ProductColour = {
+  catalogueCode: number;
+  name: string;
+  hex: string;
+};
+
 export type Product = {
   id: string;
   slug: string;
@@ -24,6 +30,7 @@ export type Product = {
   preserveImageColors?: boolean;
   galleryDisplay?: "grid" | "thumbnails";
   gallery?: ProductImage[];
+  availableColours?: ProductColour[];
   description: string;
   priceOptions?: number[];
   moq?: number;
