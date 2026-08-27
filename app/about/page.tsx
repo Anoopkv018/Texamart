@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, MapPin, MessageCircle } from "lucide-react";
+import { ArrowDownRight, ArrowRight, MessageCircle } from "lucide-react";
 import { AboutExperience } from "@/src/components/about/AboutExperience";
 import { CTASection } from "@/src/components/CTASection";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
@@ -19,13 +19,12 @@ export default function AboutPage() {
       <section className="about-hero">
         <div className="container about-hero-grid">
           <div className="about-hero-copy">
-            <h1 className="display">Quality apparel, <em>made for your brand.</em></h1>
+            <h1 className="display"><span>Quality<br />apparel,</span>{" "}<em>made for<br />your brand.</em></h1>
             <p>TEXA T-Shirts is a Mysuru-based apparel and custom garment brand creating thoughtful, dependable clothing for businesses, institutions, schools, events, teams, brands and individuals.</p>
             <div className="about-hero-actions">
               <Link className="button-primary" href="/products/apparel">Explore apparel <ArrowRight size={18} /></Link>
               <a className="button-secondary" href={quoteUrl} target="_blank" rel="noreferrer">Discuss your requirement <MessageCircle size={18} /></a>
             </div>
-            <div className="about-location"><MapPin size={18} aria-hidden="true" /><span>Mysuru, Karnataka</span></div>
           </div>
 
           <figure className="about-hero-visual">
@@ -42,6 +41,15 @@ export default function AboutPage() {
       </div>
 
       <section className="section">
+        <div style={{ position: "relative", display: "grid", placeItems: "center", marginBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+            <Image
+              className="about-origin-logo"
+              src="/brand/texa-mart-glow-logo.png"
+              alt="Texa Mart"
+              width={144}
+              height={96}
+            />
+        </div>
         <div className="container about-origin-grid">
           <div className="about-origin-heading">
             <h2 className="display section-title">Built in Mysuru. Made to represent you.</h2>
@@ -65,20 +73,38 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="ink-section section about-commitment">
+      <section className="section about-commitment">
         <div className="container about-commitment-grid">
-          <div>
-            <h2 className="display section-title">A T-shirt is more than clothing.</h2>
-            <p>It can represent a brand, create an identity and bring people together.</p>
-          </div>
-          <blockquote>
-            <p>Quality Products.<br />Honest Service.<br />Reliable Delivery.</p>
-            <footer>TEXA T-Shirts · Wear Your Identity.</footer>
+          <article className="about-commitment-card about-commitment-identity">
+            <Image
+              className="about-commitment-image"
+              src="/images/products/round-neck-tshirt-lifestyle.webp"
+              alt=""
+              fill
+              sizes="(max-width: 820px) calc(100vw - 2rem), 620px"
+            />
+            <div className="about-commitment-content">
+              <h2 className="display section-title">A T-shirt is more than clothing.</h2>
+              <p>It can represent a brand, create an identity and bring people together.</p>
+            </div>
+          </article>
+          <blockquote className="about-commitment-card about-commitment-quality">
+            <Image
+              className="about-commitment-image"
+              src="/images/products/collar-tshirt-detail.webp"
+              alt=""
+              fill
+              sizes="(max-width: 820px) calc(100vw - 2rem), 620px"
+            />
+            <div className="about-commitment-content">
+              <p>Quality Products.<br />Honest Service.<br />Reliable Delivery.</p>
+              <footer>TEXA T-Shirts · Wear Your Identity.</footer>
+            </div>
           </blockquote>
         </div>
       </section>
 
-      <CTASection title="Tell us what you want to make." copy="Share the garment, quantity, artwork and customization requirement. TEXA will continue the quotation and order discussion directly with you." />
+      <CTASection className="about-cta" title="Tell us what you want to make." copy="Share the garment, quantity, artwork and customization requirement. TEXA will continue the quotation and order discussion directly with you." />
     </>
   );
 }

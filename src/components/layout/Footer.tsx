@@ -30,7 +30,7 @@ export function Footer() {
           </div>
         </div>
         <p className="footer-word display">MAKE YOUR BRAND TANGIBLE.</p>
-        <div className="footer-meta mt-8 flex flex-wrap justify-between gap-3 border-t border-white/15 pt-5 text-xs"><span>© {new Date().getFullYear()} Texa Mart.</span><span>Custom Printing · Merchandise · Corporate Gifts</span></div>
+        <div className="footer-meta mt-8 flex flex-wrap justify-between gap-3 border-t border-white/15 pt-5 text-xs"><span>© {new Date().getFullYear()} Texa Mart. Powered by <a style={{ fontSize: "0.75rem", color: "var(--brand-marigold-soft)" }} href="https://dreambuzz.in/" target="_blank" rel="noreferrer" className="hover:underline">Dream Buzz Solutions</a></span><span>Custom Printing · Merchandise · Corporate Gifts</span></div>
       </div>
     </footer>
   );

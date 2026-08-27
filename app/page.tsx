@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowDownRight,
   ArrowRight,
   CupSoda,
   HardHat,
@@ -65,26 +63,23 @@ export default function Home() {
         <div className="marquee-track">{[...marquee, ...marquee].map((item, index) => <span aria-hidden={index >= marquee.length ? "true" : undefined} key={`${item}-${index}`} className="flex items-center gap-8"><span>{item}</span><span aria-hidden="true">•</span></span>)}</div>
       </div>
 
-      <section className="section">
+      <section className="section category-section">
         <div className="container">
-          <div className="section-heading-row">
+          <div className="section-heading-row category-heading-row">
             <Reveal><h2 className="section-title display">Everything your brand can wear, carry & share.</h2></Reveal>
-            <Reveal delay={.08}><Link href="/products" className="button-secondary">Browse the full catalogue <ArrowRight size={18} /></Link></Reveal>
+            <Reveal delay={.08}><Link href="/products" className="category-catalogue-link">Browse the full catalogue <ArrowRight size={18} /></Link></Reveal>
           </div>
           <nav className="category-mosaic" aria-label="Product categories">
             {categories.map((category, index) => {
               const CategoryIcon = categoryIcons[category.slug];
 
               return (
-                <Reveal key={category.slug} className={`category-tile tone-${category.tone}`} delay={(index % 3) * .05}>
+                <Reveal key={category.slug} className={`category-tile category-${category.slug}`} delay={(index % 3) * .05}>
                   <Link href={`/products/${category.slug}`} className="category-link" aria-label={`Explore ${category.name}`}>
-                    <div className="category-top">
-                      <h3 className="category-name">{category.name}</h3>
-                      <ArrowDownRight className="category-arrow" aria-hidden="true" />
-                    </div>
                     <span className="category-icon" aria-hidden="true">
                       <CategoryIcon focusable="false" />
                     </span>
+                    <h3 className="category-name">{category.name}</h3>
                   </Link>
                 </Reveal>
               );

@@ -123,7 +123,7 @@ export function AboutExperience() {
         </article>
       </div>
 
-      <div className="about-process-shell">
+      {/* <div className="about-process-shell">
         <div className="about-process-nav" role="tablist" aria-label="How TEXA works">
           {process.map((step, index) => (
             <button
@@ -148,7 +148,7 @@ export function AboutExperience() {
           <Users aria-hidden="true" />
           <p>{process[selectedStep].copy}</p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
