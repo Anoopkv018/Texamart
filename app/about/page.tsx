@@ -28,7 +28,7 @@ export default function AboutPage() {
           </div>
 
           <figure className="about-hero-visual">
-            <Image src="/images/about/texa-navy-apparel-hero.png" alt="Model wearing a navy round-neck T-shirt" fill priority sizes="(max-width: 820px) 100vw, 30rem" />
+            <Image src="/images/products/navy-round-neck-tshirt-cutout.png" alt="Navy round-neck T-shirt ready for custom printing" fill priority sizes="(max-width: 820px) 100vw, 30rem" />
             <figcaption>Custom apparel for work, teams, events and identity.</figcaption>
           </figure>
         </div>

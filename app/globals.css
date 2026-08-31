@@ -178,8 +178,9 @@ img { max-width: 100%; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 .category-section { padding-block: clamp(4rem,6vw,4.75rem) clamp(2.5rem,4vw,3.25rem); }
-.category-heading-row { align-items: end; }
-.category-catalogue-link { min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; gap: .7rem; padding: .7rem 0 .7rem 1rem; color: var(--brand-primary); font-size: .9rem; font-weight: 720; line-height: 1; white-space: nowrap; }
+.category-heading-row { flex-direction: column; align-items: center; justify-content: center; gap: 1rem; text-align: center; }
+.category-heading-row .section-title { max-width: 18ch; }
+.category-catalogue-link { min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; gap: .7rem; padding: .7rem 0; color: var(--brand-primary); font-size: .9rem; font-weight: 720; line-height: 1; white-space: nowrap; }
 .category-catalogue-link svg { transition: transform .3s var(--ease-out); }
 .category-catalogue-link:hover svg { transform: translateX(.3rem); }
 .category-mosaic { display: grid; grid-template-columns: repeat(9,5rem); justify-content: center; gap: 1.3rem; margin-top: clamp(3rem,5vw,4rem); }
@@ -238,6 +239,7 @@ img { max-width: 100%; }
 
 .feature-visual { position: relative; min-height: 30rem; overflow: hidden; background: var(--brand-surface); border: 1px solid var(--brand-border); border-radius: var(--radius-media); }
 .feature-visual img { object-fit: contain; padding: 2rem; mix-blend-mode: multiply; }
+.feature-visual.product-cutout img { padding: 2.5rem; mix-blend-mode: normal; }
 .ink-section ol span.display { font-size: clamp(1.2rem,2.2vw,1.75rem) !important; }
 
 .page-hero { padding: clamp(4.5rem,8vw,7rem) 0 clamp(3rem,5vw,4.5rem); background: var(--brand-lilac); border-bottom: 1px solid color-mix(in srgb, var(--brand-primary), transparent 76%); position: relative; overflow: hidden; isolation: isolate; }
@@ -528,8 +530,8 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .gift-constellation { min-height: 22rem; }
   .marquee { padding-block: .55rem; }
   .category-section { padding-block: 3.5rem 3rem; }
-  .category-heading-row { gap: .75rem; }
-  .category-catalogue-link { justify-content: flex-start; padding-left: 0; }
+  .category-heading-row { gap: .75rem; justify-items: center; text-align: center; }
+  .category-catalogue-link { justify-content: center; padding-left: 0; }
   .category-mosaic { grid-auto-columns: 5rem; gap: 1rem; margin-top: 2rem; }
   .category-link { min-height: 8.5rem; gap: .7rem; }
   .category-icon { width: 5rem; }
