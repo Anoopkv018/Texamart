@@ -182,7 +182,7 @@ img { max-width: 100%; }
 .category-catalogue-link { min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; gap: .7rem; padding: .7rem 0 .7rem 1rem; color: var(--brand-primary); font-size: .9rem; font-weight: 720; line-height: 1; white-space: nowrap; }
 .category-catalogue-link svg { transition: transform .3s var(--ease-out); }
 .category-catalogue-link:hover svg { transform: translateX(.3rem); }
-.category-mosaic { display: grid; grid-template-columns: repeat(9,5rem); gap: 1.3rem; margin-top: clamp(3rem,5vw,4rem); }
+.category-mosaic { display: grid; grid-template-columns: repeat(9,5rem); justify-content: center; gap: 1.3rem; margin-top: clamp(3rem,5vw,4rem); }
 .category-tile,
 .category-tile:nth-child(n) { position: relative; grid-column: span 1; min-width: 0; color: var(--brand-text); background: transparent; }
 .category-link { min-height: 8.5rem; height: 100%; display: flex; flex-direction: column; align-items: center; gap: .7rem; text-align: center; }
@@ -253,9 +253,9 @@ img { max-width: 100%; }
 .about-hero-copy h1 em { color: var(--brand-primary); }
 .about-hero-copy > p { max-width: 32rem; margin-top: 1.75rem; color: var(--brand-white); font-size: clamp(.96rem,1vw,1.05rem); font-weight: 500; line-height: 1.65; }
 .about-hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.65rem; }
-.about-hero-visual { width: min(28rem,100%); min-height: 31rem; align-self: end; justify-self: start; position: relative; overflow: visible; background: transparent; border-radius: 0; }
-.about-hero-visual img { object-fit: contain; object-position: 30% bottom; transition: transform .55s var(--ease-out); }
-.about-hero-visual:hover img { transform: scale(1.045); }
+.about-hero-visual { width: min(30rem,100%); min-height: 33rem; align-self: end; justify-self: center; position: relative; overflow: visible; background: transparent; border-radius: 0; }
+.about-hero-visual img { object-fit: contain; object-position: center bottom; scale: 1.06; transform-origin: center bottom; transition: transform .55s var(--ease-out); }
+.about-hero-visual:hover img { transform: translateY(-.25rem); }
 .about-hero-visual figcaption { width: min(16rem,100%); position: absolute; left: 0; bottom: .65rem; padding: .75rem .9rem; color: var(--brand-primary); background: var(--brand-white); border-radius: var(--radius-control); font-size: .76rem; font-weight: 720; line-height: 1.35; }
 .about-proof-rail { color: var(--brand-white); background: var(--brand-primary); }
 .about-proof-rail .container { min-height: 4.25rem; display: grid; grid-template-columns: repeat(4,1fr); align-items: center; }
@@ -436,7 +436,7 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .mobile-trigger { display: inline-flex !important; }
   .hero-grid { grid-template-columns: 1fr minmax(22rem,.8fr); gap: 2.5rem; }
   .hero-title { font-size: clamp(2.85rem,6vw,3.8rem); }
-  .category-mosaic { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 5rem; gap: 1.3rem; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: .1rem; scroll-snap-type: x proximity; padding: .35rem .1rem .8rem; }
+  .category-mosaic { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 5rem; justify-content: start; gap: 1.3rem; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: .1rem; scroll-snap-type: x proximity; padding: .35rem .1rem .8rem; }
   .category-tile { scroll-snap-align: start; }
   .product-rail, .catalog-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .gift-selector { grid-template-columns: repeat(2,minmax(0,1fr)); }

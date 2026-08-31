@@ -28,7 +28,7 @@ export default function AboutPage() {
           </div>
 
           <figure className="about-hero-visual">
-            <Image src="/images/products/collar-tshirt-lifestyle.webp" alt="Model wearing a TEXA green polo T-shirt" fill priority sizes="(max-width: 820px) 100vw, 45vw" />
+            <Image src="/images/about/texa-navy-apparel-hero.png" alt="Model wearing a navy round-neck T-shirt" fill priority sizes="(max-width: 820px) 100vw, 30rem" />
             <figcaption>Custom apparel for work, teams, events and identity.</figcaption>
           </figure>
         </div>
