@@ -87,7 +87,24 @@ export const products: Product[] = [
   { id: "premium-caps", slug: "premium-caps", name: "Premium Caps", category: "caps", image: "/images/products/premium-caps.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.cap, priceOptions: [260], featured: true },
 
   { id: "button-fridge-magnet", slug: "button-fridge-magnet", name: "Button Fridge Magnet", category: "fridge-magnets", image: "/images/products/button-fridge-magnet.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.magnet, priceOptions: [45] },
-  { id: "acrylic-fridge-magnet", slug: "acrylic-fridge-magnet", name: "Acrylic Fridge Magnet", category: "fridge-magnets", image: "/images/products/acrylic-fridge-magnet.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.magnet, priceOptions: [65] },
+  {
+    id: "acrylic-fridge-magnet",
+    slug: "acrylic-fridge-magnet",
+    name: "Acrylic Fridge Magnet",
+    category: "fridge-magnets",
+    image: "/images/products/acrylic-fridge-magnet.webp",
+    preserveImageColors: true,
+    galleryDisplay: "thumbnails",
+    gallery: [
+      {
+        src: "/images/products/acrylic-fridge-magnet-goa.webp",
+        alt: "Goa-themed custom acrylic fridge magnet held in a hand",
+        caption: "Finished acrylic magnet example",
+      },
+    ],
+    description: "A custom acrylic keepsake for destination souvenirs, events, campaigns and branded reminders.",
+    priceOptions: [65],
+  },
   { id: "metal-fridge-magnet", slug: "metal-fridge-magnet", name: "Metal Fridge Magnet", category: "fridge-magnets", image: "/images/products/metal-fridge-magnet.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.magnet, priceOptions: [85] },
   { id: "pending-fridge-magnet-label", slug: "pending-fridge-magnet-label", name: "Frame / Flame Fridge Magnet", category: "fridge-magnets", image: "/images/products/pending-fridge-magnet-label.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.magnet, priceOptions: [55], labelPendingConfirmation: true, pricingNote: "Product label pending client confirmation." },
 
