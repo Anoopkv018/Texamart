@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -24,6 +25,35 @@ import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsap
 import type { ProductCategory } from "@/src/types/product";
 
 const marquee = ["CUSTOM APPAREL", "CORPORATE GIFTS", "MERCHANDISE", "CUSTOM PRINTING", "BULK ORDERS", "BRANDED PRODUCTS"];
+const brandFamily = [
+  {
+    name: "Swing Style",
+    description: "Classic golf style with a clean, sporting identity.",
+    logo: "/brand/swing-style-logo.png",
+    width: 3901,
+    height: 985,
+    markClass: "brand-family-mark-wide",
+    href: "/golf-tshirts",
+  },
+  {
+    name: "TEON",
+    description: "A bold contemporary mark with a strong, minimal presence.",
+    logo: "/brand/teon-logo.png",
+    width: 2147,
+    height: 1639,
+    markClass: "brand-family-mark-tall",
+    href: null,
+  },
+  {
+    name: "London Tailor",
+    description: "Heritage-inspired tailoring with an unmistakable signature.",
+    logo: "/brand/london-tailor-logo.png",
+    width: 2963,
+    height: 2234,
+    markClass: "brand-family-mark-tall",
+    href: null,
+  },
+] as const;
 const steps = [
   ["Choose your product", "Browse apparel, gifts, drinkware, bags and branded merchandise."],
   ["Share your requirement", "Tell us the quantity, branding requirement and customization details."],
@@ -56,6 +86,36 @@ export default function Home() {
             <Reveal delay={.36} className="hero-stamp"><span className="grid h-10 w-10 place-items-center border border-current"><Sparkles size={17} /></span><span className="label">Wear it · Carry it · Remember it</span></Reveal>
           </div>
           <Reveal delay={.22} className="hero-stage"><ProductConstellation variant="apparel" /></Reveal>
+        </div>
+      </section>
+
+      <section className="brand-family" aria-labelledby="brand-family-title">
+        <div className="container brand-family-layout">
+          <div className="brand-family-intro">
+            <h2 id="brand-family-title" className="display brand-family-heading">Meet our brand family.</h2>
+            <p>Distinct labels, each with its own character and a shared eye for memorable apparel.</p>
+          </div>
+          <ul className="brand-family-list">
+            {brandFamily.map((brand) => (
+              <li className="brand-family-item" key={brand.name}>
+                <div className="brand-family-logo" aria-hidden="true">
+                  <Image
+                    src={brand.logo}
+                    alt=""
+                    width={brand.width}
+                    height={brand.height}
+                    sizes="(max-width: 560px) 64vw, (max-width: 820px) 30vw, 16rem"
+                    className={brand.markClass}
+                  />
+                </div>
+                <div>
+                  <h3>{brand.name}</h3>
+                  <p>{brand.description}</p>
+                  {brand.href && <Link className="brand-family-link" href={brand.href}>Explore golf T-shirts <ArrowRight size={15} /></Link>}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

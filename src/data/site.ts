@@ -16,6 +16,7 @@ export const siteConfig = {
 export const navigation = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
+  { label: "Golf T-Shirts", href: "/golf-tshirts" },
   { label: "Custom Printing", href: "/custom-printing" },
   { label: "Corporate Gifts", href: "/corporate-gifts" },
   { label: "About", href: "/about" },

@@ -78,7 +78,7 @@ export default function AboutPage() {
           <article className="about-commitment-card about-commitment-identity">
             <Image
               className="about-commitment-image"
-              src="/images/products/round-neck-tshirt-lifestyle.webp"
+              src="/images/products/round-neck-tshirt-yellow-lifestyle.webp"
               alt=""
               fill
               sizes="(max-width: 820px) calc(100vw - 2rem), 620px"

@@ -126,6 +126,86 @@ img { max-width: 100%; }
 .hero-stamp > span:first-child { width: 2rem !important; height: 2rem !important; }
 .hero-stage { min-width: 0; width: 100%; margin-left: auto; }
 
+.brand-family { padding-block: clamp(2.25rem,4vw,3rem); background: var(--brand-background); border-bottom: 1px solid var(--brand-border); }
+.brand-family-layout { display: grid; grid-template-columns: minmax(13rem,.72fr) minmax(0,2.28fr); gap: clamp(2rem,4vw,3.75rem); align-items: center; }
+.brand-family-intro { display: grid; gap: .85rem; }
+.brand-family-heading { max-width: 10ch; color: var(--brand-primary); font-size: clamp(1.75rem,2.5vw,2.45rem); line-height: .96; }
+.brand-family-intro p { max-width: 29ch; color: var(--brand-muted); font-size: .96rem; line-height: 1.55; }
+.brand-family-list { min-width: 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+.brand-family-item { min-width: 0; display: grid; grid-template-rows: 7.75rem auto; gap: 1rem; padding-inline: clamp(1.25rem,2.25vw,2rem); border-left: 1px solid var(--brand-border); }
+.brand-family-logo { min-width: 0; height: 7.75rem; display: grid; place-items: center; overflow: hidden; }
+.brand-family-logo img { width: auto; height: auto; object-fit: contain; object-position: center; }
+.brand-family-logo .brand-family-mark-wide { width: min(100%,14rem); max-height: 4.25rem; }
+.brand-family-logo .brand-family-mark-tall { width: min(100%,8.25rem); max-height: 7.5rem; }
+.brand-family-item h3 { color: var(--brand-primary); font-size: .78rem; font-weight: 760; letter-spacing: .09em; line-height: 1.2; text-transform: uppercase; }
+.brand-family-item p { max-width: 25ch; margin-top: .4rem; color: var(--brand-muted); font-size: .88rem; line-height: 1.48; }
+.brand-family-link { min-height: 2.75rem; display: inline-flex; align-items: center; gap: .45rem; margin-top: .35rem; color: var(--brand-primary); font-size: .78rem; font-weight: 760; }
+.brand-family-link svg { transition: transform .25s var(--ease-out); }
+.brand-family-link:hover svg { transform: translateX(.2rem); }
+
+.golf-hero { padding-block: clamp(3.25rem,6vw,5rem); color: var(--brand-white); background: var(--brand-primary); overflow: hidden; }
+.golf-hero-grid { display: grid; grid-template-columns: minmax(0,.92fr) minmax(25rem,1.08fr); gap: clamp(3rem,6vw,5.5rem); align-items: center; }
+.golf-hero-copy { min-width: 0; }
+.golf-brand-mark { width: min(15.5rem,68%); height: auto; padding: .65rem .8rem; background: var(--brand-white); }
+.golf-hero h1 { max-width: 9ch; margin-top: clamp(2.5rem,5vw,4rem); font-size: clamp(3.3rem,5.8vw,5.4rem); line-height: .9; }
+.golf-hero-copy > p { max-width: 34rem; margin-top: 1.75rem; color: var(--brand-on-dark); font-size: clamp(1.05rem,1.4vw,1.2rem); line-height: 1.65; }
+.golf-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; margin-top: 2rem; }
+.golf-text-link { min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; gap: .55rem; color: inherit; font-size: .88rem; font-weight: 720; }
+.golf-text-link svg { transition: transform .3s var(--ease-out); }
+.golf-text-link:hover svg { transform: translateY(.2rem); }
+.golf-quick-facts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin-top: clamp(2.5rem,5vw,4rem); border-block: 1px solid rgba(255,255,255,.22); }
+.golf-quick-facts div { padding: 1rem 1rem 1rem 0; }
+.golf-quick-facts div + div { padding-left: 1rem; border-left: 1px solid rgba(255,255,255,.22); }
+.golf-quick-facts dt { color: var(--brand-on-dark-muted); font-size: .7rem; font-weight: 720; letter-spacing: .09em; text-transform: uppercase; }
+.golf-quick-facts dd { margin-top: .35rem; font-family: var(--font-display); font-size: 1.05rem; font-weight: 720; }
+.golf-hero-gallery { min-width: 0; }
+.golf-hero-gallery .product-gallery { position: relative; top: auto; }
+.golf-hero-gallery .product-gallery-stage { box-shadow: 0 28px 70px rgba(10,8,38,.34); }
+.golf-hero-gallery .product-gallery-media { height: clamp(32rem,49vw,42rem); background: var(--brand-white); }
+.golf-hero-gallery .product-gallery-caption { color: var(--brand-muted); background: var(--brand-white); }
+.golf-hero-gallery .product-gallery-thumbnail { border-color: rgba(255,255,255,.32); }
+.golf-hero-gallery .product-gallery-thumbnail[aria-pressed="true"] { border-color: var(--brand-marigold); }
+.golf-feature-band { color: var(--brand-primary); background: var(--brand-marigold); border-bottom: 1px solid color-mix(in srgb,var(--brand-primary),transparent 72%); }
+.golf-feature-band ul { min-height: 6rem; display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); }
+.golf-feature-band li { display: grid; place-items: center; align-content: center; gap: .55rem; padding: 1rem .65rem; border-left: 1px solid color-mix(in srgb,var(--brand-primary),transparent 72%); text-align: center; }
+.golf-feature-band li:last-child { border-right: 1px solid color-mix(in srgb,var(--brand-primary),transparent 72%); }
+.golf-feature-band svg { width: 1.55rem; height: 1.55rem; stroke-width: 1.6; }
+.golf-feature-band span { font-size: .7rem; font-weight: 760; letter-spacing: .06em; line-height: 1.25; text-transform: uppercase; }
+.golf-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 3rem; }
+.golf-section-heading > p { max-width: 34rem; color: var(--brand-muted); font-size: 1rem; line-height: 1.65; }
+.golf-design-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1rem; margin-top: 3rem; }
+.golf-design { min-width: 0; overflow: hidden; background: var(--brand-white); border-radius: var(--radius-media); box-shadow: 0 1px 0 rgba(31,27,100,.1); }
+.golf-design-image { position: relative; aspect-ratio: 763 / 1078; overflow: hidden; background: var(--brand-white); }
+.golf-design-image img { object-fit: contain; transition: transform .5s var(--ease-out); }
+.golf-design:hover .golf-design-image img { transform: scale(1.025); }
+.golf-design figcaption { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 1rem; color: var(--brand-primary); font-size: .75rem; font-weight: 760; letter-spacing: .06em; text-transform: uppercase; }
+.golf-design figcaption span:last-child { color: var(--brand-muted); font-variant-numeric: tabular-nums; }
+.golf-spec-section { background: var(--brand-surface); }
+.golf-spec-layout { display: grid; grid-template-columns: minmax(18rem,.78fr) minmax(0,1.22fr); gap: clamp(3rem,8vw,7rem); align-items: start; }
+.golf-spec-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-top: 1px solid var(--brand-primary); }
+.golf-spec-list div { min-height: 8rem; padding: 1.25rem 1rem 1.25rem 0; border-bottom: 1px solid var(--brand-border); }
+.golf-spec-list div:nth-child(even) { padding-left: 1.25rem; border-left: 1px solid var(--brand-border); }
+.golf-spec-list dt { color: var(--brand-primary); font-size: .7rem; font-weight: 760; letter-spacing: .09em; text-transform: uppercase; }
+.golf-spec-list dd { margin-top: .9rem; font-family: var(--font-display); font-size: clamp(1.25rem,2vw,1.6rem); font-weight: 720; line-height: 1.16; }
+.golf-quote-section { color: var(--brand-signal-ink); background: var(--brand-signal-soft); }
+.golf-quote-layout { display: flex; align-items: end; justify-content: space-between; gap: 3rem; }
+.golf-quote-layout > div > p { max-width: 47rem; margin-top: 1.5rem; font-size: 1.08rem; line-height: 1.65; }
+.golf-quote-layout .button-primary { flex: 0 0 auto; }
+.golf-faq-section { background: var(--brand-background); }
+.golf-faq-layout { display: grid; grid-template-columns: minmax(15rem,.7fr) minmax(0,1.3fr); gap: clamp(2.5rem,7vw,6rem); }
+.golf-faq-list { border-top: 1px solid var(--brand-primary); }
+.golf-faq-list details { border-bottom: 1px solid var(--brand-border); }
+.golf-faq-list summary { min-height: 4.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1rem; color: var(--brand-primary); font-family: var(--font-display); font-size: 1.2rem; font-weight: 720; cursor: pointer; }
+.golf-faq-list summary::after { content: "+"; flex: 0 0 auto; font-family: var(--font-body); font-size: 1.35rem; font-weight: 450; }
+.golf-faq-list details[open] summary::after { content: "−"; }
+.golf-faq-list summary::-webkit-details-marker { display: none; }
+.golf-faq-list details p { max-width: 65ch; padding: 0 2rem 1.5rem 0; color: var(--brand-muted); line-height: 1.65; }
+.golf-closing { padding-block: clamp(3rem,5vw,4.5rem); color: var(--brand-white); background: var(--brand-primary-hover); }
+.golf-closing .container { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+.golf-closing p { max-width: 17ch; font-size: clamp(2rem,4vw,3.5rem); }
+.golf-closing .golf-text-link svg { transform: rotate(-90deg); }
+.golf-closing .golf-text-link:hover svg { transform: translateX(.2rem) rotate(-90deg); }
+
 .product-constellation {
   --parallax-x-sm: 0px;
   --parallax-y-sm: 0px;
@@ -438,6 +518,8 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .mobile-trigger { display: inline-flex !important; }
   .hero-grid { grid-template-columns: 1fr minmax(22rem,.8fr); gap: 2.5rem; }
   .hero-title { font-size: clamp(2.85rem,6vw,3.8rem); }
+  .golf-hero-grid { grid-template-columns: minmax(0,.82fr) minmax(23rem,1.18fr); gap: 2.5rem; }
+  .golf-design-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .category-mosaic { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 5rem; justify-content: start; gap: 1.3rem; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: .1rem; scroll-snap-type: x proximity; padding: .35rem .1rem .8rem; }
   .category-tile { scroll-snap-align: start; }
   .product-rail, .catalog-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
@@ -453,6 +535,20 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .hero-grid > * { min-width: 0; }
   .hero-title { max-width: 100%; }
   .hero-stage { max-width: min(36rem,100%); width: 100%; justify-self: end; }
+  .brand-family-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .brand-family-intro { grid-template-columns: minmax(0,1fr) minmax(14rem,.8fr); align-items: end; }
+  .brand-family-intro p { justify-self: end; }
+  .golf-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .golf-hero-copy { max-width: 42rem; }
+  .golf-hero h1 { max-width: 10ch; }
+  .golf-hero-gallery { width: min(100%,36rem); justify-self: center; }
+  .golf-feature-band ul { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .golf-feature-band li:nth-child(3) { border-right: 1px solid color-mix(in srgb,var(--brand-primary),transparent 72%); }
+  .golf-feature-band li:nth-child(n + 4) { border-top: 1px solid color-mix(in srgb,var(--brand-primary),transparent 72%); }
+  .golf-section-heading, .golf-quote-layout, .golf-closing .container { display: grid; align-items: start; gap: 1.5rem; }
+  .golf-design-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .golf-spec-layout, .golf-faq-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .golf-quote-layout .button-primary { justify-self: start; }
   .product-constellation { min-height: 28rem; }
   .story-grid, .process, .detail-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-hero { min-height: auto; }
@@ -515,13 +611,47 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .about-commitment-quality::after { background: linear-gradient(0deg,rgba(197,239,212,1) 0%,rgba(197,239,212,.98) 60%,rgba(197,239,212,.74) 82%,rgba(197,239,212,.1) 100%); }
   .about-process-nav { display: flex; overflow-x: auto; scroll-snap-type: x proximity; }
   .about-process-tab { min-width: 12.5rem; scroll-snap-align: start; }
-  .hero-title { font-size: clamp(2.85rem,12vw,3.35rem); max-width: 100%; }
+  .hero-title { font-size: clamp(2.65rem,11vw,3.15rem); max-width: 100%; }
   .hero-title em { display: block; }
   .hero-copy { margin-top: 1rem; }
   .hero-actions { display: grid; margin-top: 1.25rem; }
   .hero-actions .button-primary, .hero-actions .button-secondary { width: 100%; }
   .hero-stamp { display: none; }
   .hero-stage { min-height: 22rem; }
+  .brand-family { padding-block: 2.5rem; }
+  .brand-family-layout { gap: 1.75rem; }
+  .brand-family-intro { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+  .brand-family-intro p { max-width: 34ch; justify-self: start; }
+  .brand-family-list { grid-template-columns: 1fr; }
+  .brand-family-item { grid-template-columns: minmax(7.75rem,.9fr) minmax(0,1.1fr); grid-template-rows: none; align-items: center; gap: 1rem; padding: 1.25rem .25rem; border-top: 1px solid var(--brand-border); border-left: 0; }
+  .brand-family-logo { height: 5.75rem; }
+  .brand-family-logo .brand-family-mark-wide { width: min(100%,9.5rem); }
+  .brand-family-logo .brand-family-mark-tall { width: min(100%,6.2rem); max-height: 5.75rem; }
+  .golf-hero { padding-block: 2.75rem 3.25rem; }
+  .golf-brand-mark { width: 12.5rem; max-width: 68%; }
+  .golf-hero h1 { max-width: 100%; margin-top: 2.5rem; font-size: clamp(2.8rem,13vw,3.45rem); }
+  .golf-hero-copy > p { margin-top: 1.25rem; }
+  .golf-hero-actions { display: grid; gap: .5rem; margin-top: 1.5rem; }
+  .golf-hero-actions .button-light, .golf-hero-actions .golf-text-link { width: 100%; }
+  .golf-quick-facts { margin-top: 2.25rem; }
+  .golf-quick-facts div { padding: .85rem .6rem .85rem 0; }
+  .golf-quick-facts div + div { padding-left: .6rem; }
+  .golf-quick-facts dd { font-size: .9rem; }
+  .golf-hero-gallery { width: 100%; }
+  .golf-hero-gallery .product-gallery-media { height: 31rem; }
+  .golf-feature-band ul { width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .golf-feature-band li:nth-child(n) { min-height: 6rem; border-top: 1px solid color-mix(in srgb,var(--brand-primary),transparent 72%); border-right: 0; }
+  .golf-feature-band li:nth-child(even) { border-right: 1px solid color-mix(in srgb,var(--brand-primary),transparent 72%); }
+  .golf-design-section { scroll-margin-top: 4.5rem; }
+  .golf-section-heading { gap: 1rem; }
+  .golf-design-grid { gap: .625rem; margin-top: 2rem; }
+  .golf-design figcaption { display: grid; gap: .3rem; padding: .75rem; font-size: .68rem; }
+  .golf-spec-list { grid-template-columns: 1fr; }
+  .golf-spec-list div:nth-child(even) { padding-left: 0; border-left: 0; }
+  .golf-spec-list div { min-height: 0; }
+  .golf-quote-layout .button-primary { width: 100%; }
+  .golf-faq-list summary { font-size: 1.05rem; }
+  .golf-closing .golf-text-link { justify-content: flex-start; }
   .product-constellation { min-height: 22rem; width: 100%; }
   .constellation-index { top: .5rem; right: -.1rem; font-size: .55rem; }
   .apparel-back { inset: 15% 35% 1% -3%; }
@@ -581,5 +711,7 @@ article.max-w-3xl h2 { font-size: 1.55rem !important; }
   .product-card:hover, .product-card:hover .product-card-image img, .detail-gallery-item:hover .detail-gallery-media img, .category-link:hover .category-icon, .category-catalogue-link:hover svg, .floating-whatsapp:hover, .button-primary:hover, .button-secondary:hover, .button-light:hover { transform: none; }
   .about-service-preview, .about-process-panel { animation: none; }
   .about-service-button:hover, .about-service-button:focus-visible, .about-hero-visual:hover img { transform: none; }
+  .golf-design-image img, .brand-family-link svg, .golf-text-link svg { transition-duration: .01ms; }
+  .golf-design:hover .golf-design-image img, .brand-family-link:hover svg, .golf-text-link:hover svg { transform: none; }
   .product-constellation { --parallax-x-sm: 0px !important; --parallax-y-sm: 0px !important; --parallax-x-md: 0px !important; --parallax-y-md: 0px !important; --parallax-x-lg: 0px !important; --parallax-y-lg: 0px !important; }
 }
