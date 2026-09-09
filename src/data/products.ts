@@ -109,6 +109,7 @@ export const products: Product[] = [
   },
   { id: "foldable-caps", slug: "foldable-caps", name: "Foldable Caps", category: "caps", image: "/images/products/foldable-cap-navy-angle.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.cap, priceOptions: [250] },
   { id: "button-fridge-magnet", slug: "button-fridge-magnet", name: "Button Fridge Magnet", category: "fridge-magnets", image: "/images/products/button-fridge-magnet.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.magnet, priceOptions: [45] },
+  { id: "leather-magnet", slug: "leather-magnet", name: "Leather Magnet", category: "fridge-magnets", image: "/images/products/leather-magnet.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A leather-finish custom magnet with embossed artwork for souvenirs, events and branded keepsakes.", priceOptions: [60] },
   {
     id: "acrylic-fridge-magnet",
     slug: "acrylic-fridge-magnet",
