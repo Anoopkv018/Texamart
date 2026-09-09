@@ -78,6 +78,17 @@ export const products: Product[] = [
     { src: "/images/products/pants-navy-angle.webp", alt: "Three-quarter view of the navy drawstring pants", caption: "Three-quarter view" },
     { src: "/images/products/pants-navy-back.webp", alt: "Back view of the navy drawstring pants", caption: "Back view" },
   ], availableColours: colours(1, 2, 10, 11, 21), description: descriptions.apparel, priceOptions: [495] },
+  {
+    id: "jacket",
+    slug: "jacket",
+    name: "Jacket",
+    category: "apparel",
+    image: "/images/products/jacket-olive.png",
+    preserveImageColors: true,
+    galleryDisplay: "thumbnails",
+    description: "A sleeveless utility-style jacket with a zip front and multiple pockets for teamwear, field use and branded requirements.",
+    priceOnRequest: true,
+  },
 
   {
     id: "smart-caps", slug: "smart-caps", name: "Smart Caps", category: "caps", image: "/images/products/smart-cap-black-front.webp", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
@@ -121,14 +132,57 @@ export const products: Product[] = [
     { src: "/images/products/satin-keychain-wristlets.webp", alt: "Collection of printed satin wristlet keychains", caption: "Wristlet styles" },
   ], description: descriptions.gift, priceOptions: [15], moq: 500 },
   { id: "wooden-keychain", slug: "wooden-keychain", name: "Wooden Keychain", category: "keychains-gifts", image: "/images/products/wooden-keychain-collection.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.gift, priceOptions: [35], moq: 50 },
-  { id: "button-keychain", slug: "button-keychain", name: "Button Keychain", category: "keychains-gifts", description: descriptions.gift, priceOptions: [35], moq: 50 },
-  { id: "acrylic-keychain", slug: "acrylic-keychain", name: "Acrylic Keychain", category: "keychains-gifts", description: descriptions.gift, priceOptions: [45], moq: 50, featured: true },
+  { id: "button-keychain", slug: "button-keychain", name: "Button Keychain", category: "keychains-gifts", image: "/images/products/button-keychain.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A round button keychain shown from the front and back, ready for a custom design or brand requirement.", priceOptions: [35], moq: 50 },
+  { id: "acrylic-keychain", slug: "acrylic-keychain", name: "Acrylic Keychain", category: "keychains-gifts", image: "/images/products/acrylic-keychain.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Custom-shaped acrylic keychains that turn logos, symbols and artwork into practical branded keepsakes.", priceOptions: [45], moq: 50, featured: true },
   { id: "mementoes", slug: "mementoes", name: "Mementoes", category: "keychains-gifts", image: "/images/products/mementoes-elephant-display.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.gift, priceOnRequest: true },
 
   { id: "mug", slug: "mug", name: "Mug", category: "drinkware", image: "/images/products/mug.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.drinkware, priceOptions: [160], featured: true },
-  { id: "uv-bottle-500ml", slug: "uv-bottle-500ml", name: "UV Bottle — 500 ml", category: "drinkware", image: "/images/products/uv-bottle-500ml.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.drinkware, priceOptions: [260] },
-  { id: "uv-bottle-750ml", slug: "uv-bottle-750ml", name: "UV Bottle — 750 ml", category: "drinkware", image: "/images/products/uv-bottle-750ml.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.drinkware, priceOptions: [280], featured: true },
-  { id: "uv-bottle-1-litre", slug: "uv-bottle-1-litre", name: "UV Bottle — 1 Litre", category: "drinkware", image: "/images/products/uv-bottle-1-litre.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.drinkware, priceOptions: [320] },
+  {
+    id: "uv-bottle-500ml",
+    slug: "uv-bottle-500ml",
+    name: "UV Bottle — 500 ml",
+    category: "drinkware",
+    image: "/images/products/uv-bottle-white-pair.png",
+    preserveImageColors: true,
+    galleryDisplay: "thumbnails",
+    gallery: [
+      { src: "/images/products/corporate-gift-black-bottle.png", alt: "Single black UV bottle with a stainless-steel cap and carry strap", caption: "Black bottle" },
+      { src: "/images/products/bottle.png", alt: "UV bottles displayed in a range of colours and sizes", caption: "Colour and size options" },
+    ],
+    description: descriptions.drinkware,
+    priceOptions: [260],
+  },
+  {
+    id: "uv-bottle-750ml",
+    slug: "uv-bottle-750ml",
+    name: "UV Bottle — 750 ml",
+    category: "drinkware",
+    image: "/images/products/corporate-gift-black-bottle.png",
+    preserveImageColors: true,
+    galleryDisplay: "thumbnails",
+    gallery: [
+      { src: "/images/products/uv-bottle-white-pair.png", alt: "Pair of white UV bottles with stainless-steel caps", caption: "White bottle pair" },
+      { src: "/images/products/bottle.png", alt: "UV bottles displayed in a range of colours and sizes", caption: "Colour and size options" },
+    ],
+    description: descriptions.drinkware,
+    priceOptions: [280],
+    featured: true,
+  },
+  {
+    id: "uv-bottle-1-litre",
+    slug: "uv-bottle-1-litre",
+    name: "UV Bottle — 1 Litre",
+    category: "drinkware",
+    image: "/images/products/bottle.png",
+    preserveImageColors: true,
+    galleryDisplay: "thumbnails",
+    gallery: [
+      { src: "/images/products/corporate-gift-black-bottle.png", alt: "Single black UV bottle with a stainless-steel cap and carry strap", caption: "Black bottle" },
+      { src: "/images/products/uv-bottle-white-pair.png", alt: "Pair of white UV bottles with stainless-steel caps", caption: "White bottle pair" },
+    ],
+    description: descriptions.drinkware,
+    priceOptions: [320],
+  },
 
   { id: "diary", slug: "diary", name: "Diary", category: "stationery", image: "/images/products/diary.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.stationery, priceOptions: [150], moq: 10, featured: true },
   {
@@ -136,7 +190,7 @@ export const products: Product[] = [
       { src: "/images/products/metal-pen-2.webp", alt: "Black metal pen showing engraving positions and finish details", caption: "Custom engraving preview" },
     ], description: descriptions.stationery, priceOptions: [65], moq: 50
   },
-  { id: "uv-stickers", slug: "uv-stickers", name: "UV Stickers", category: "stationery", description: descriptions.stationery, priceOptions: [30], pricingNote: "Client artwork also references approximately ₹4.25 per sq inch; confirm final specification." },
+  { id: "uv-stickers", slug: "uv-stickers", name: "UV Stickers", category: "stationery", image: "/images/products/uv-stickers.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Colourful UV stickers prepared in custom shapes for products, devices, packaging and promotional applications.", priceOptions: [30], pricingNote: "Client artwork also references approximately ₹4.25 per sq inch; confirm final specification." },
   { id: "bookmark", slug: "bookmark", name: "Bookmark", category: "stationery", image: "/images/products/bookmark-collection.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A compact printed format for reader-focused gifts, events and memorable brand reminders.", priceOptions: [4.5] },
   {
     id: "leather-wrist-band",
@@ -189,10 +243,12 @@ export const products: Product[] = [
   { id: "jute-bag", slug: "jute-bag", name: "Jute Bag", category: "bags-accessories", image: "/images/products/jute-bag-structured.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A structured jute carry bag with twin handles and a broad front area for branded requirements.", priceOptions: [60, 90, 110, 160] },
   { id: "jute-pouch", slug: "jute-pouch", name: "Jute Pouches", category: "bags-accessories", image: "/images/products/jute-pouches-colours.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Drawstring jute pouches shown in multiple colours for gifting, packaging and branded presentation.", priceOptions: [8.5, 12.5, 14.5] },
   { id: "backpack", slug: "backpack", name: "Backpack", category: "bags-accessories", image: "/images/products/backpack.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.bag, priceOnRequest: true },
-  { id: "trolley", slug: "trolley", name: "Trolley", category: "bags-accessories", description: descriptions.bag, priceOnRequest: true },
+  { id: "laptop-bag", slug: "laptop-bag", name: "Laptop Bag", category: "bags-accessories", image: "/images/products/laptop-bag-black.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A structured black laptop backpack with padded shoulder straps, multiple zipped compartments and a broad front area for branded requirements.", priceOnRequest: true },
+  { id: "trolley", slug: "trolley", name: "Trolley", category: "bags-accessories", image: "/images/products/trolley.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A compact hard-shell trolley with a telescopic handle and four-wheel base for travel and gifting requirements.", priceOnRequest: true },
 
-  { id: "custom-flags", slug: "custom-flags", name: "Custom Flags", category: "other-products", image: "/images/products/custom-flags.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.other, priceOptions: [60, 400, 600], featured: true },
-  { id: "umbrella", slug: "umbrella", name: "Umbrella", category: "other-products", image: "/images/products/umbrella.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.other, priceOptions: [200] },
+  { id: "custom-flags", slug: "custom-flags", name: "Custom Flags", category: "other-products", image: "/images/products/custom-flags-new.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A custom printed flag format for events, teams, institutions and branded display requirements.", priceOptions: [60, 400, 600], featured: true },
+  { id: "umbrella", slug: "umbrella", name: "Umbrella", category: "other-products", image: "/images/products/umbrella-black.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A full-size black umbrella for practical gifting, event and branded merchandise requirements.", priceOptions: [200] },
+  { id: "mysuru-shalya", slug: "mysuru-shalya", name: "Mysuru Shalya", category: "other-products", image: "/images/products/mysuru-shalya.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A ceremonial Mysuru shalya with an ornate woven border and tassel finish, available in a selection of traditional colourways.", priceOnRequest: true },
 ];
 
 export function getProduct(category: string, slug: string) {

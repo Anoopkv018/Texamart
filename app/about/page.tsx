@@ -40,6 +40,21 @@ export default function AboutPage() {
         </div>
       </div>
 
+      <section className="about-studio-section" aria-labelledby="about-studio-title">
+        <figure className="about-studio-figure">
+          <Image
+            src="/images/texa-production-unit.png"
+            alt="TEXA team printing, finishing and packing custom T-shirts inside the Mysuru production unit"
+            fill
+            sizes="(max-width: 820px) calc(100vw - 2rem), 1032px"
+          />
+          <figcaption>
+            <strong id="about-studio-title" className="display">Made in Mysuru.</strong>
+            <span>Inside the TEXA production unit, where apparel moves from print to finishing and packing.</span>
+          </figcaption>
+        </figure>
+      </section>
+
       <section className="section">
         <div style={{ position: "relative", display: "grid", placeItems: "center", marginBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
             <Image

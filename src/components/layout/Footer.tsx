@@ -23,9 +23,16 @@ export function Footer() {
             <p className="footer-heading label mb-5">Company</p>
             <div className="grid gap-3"><Link href="/custom-printing">Custom Printing</Link><Link href="/corporate-gifts">Corporate Gifts</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></div>
           </div>
-          <div>
+          <div className="footer-contact">
             <p className="footer-heading label mb-5">Contact</p>
-            <a href={siteConfig.phoneHref} className="text-xl !text-white">{siteConfig.phone}</a>
+            <address className="footer-address">
+              <strong>{siteConfig.legalName}</strong>
+              <span>{siteConfig.address}</span>
+              <a href={siteConfig.supportPhoneHref}>Support: {siteConfig.supportPhone}</a>
+              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+              <a href={`mailto:${siteConfig.secondaryEmail}`}>{siteConfig.secondaryEmail}</a>
+              <span>GSTIN: {siteConfig.gstin}</span>
+            </address>
             <div className="mt-8 grid gap-3 text-sm"><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms</Link></div>
           </div>
         </div>

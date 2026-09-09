@@ -104,7 +104,7 @@ export function ProductConstellation({ variant, className = "" }: ProductConstel
         <Image src="/images/products/diary-black.png" alt="Black branded diary" fill sizes="(max-width: 820px) 50vw, 20vw" />
       </span>
       <span className="constellation-layer depth-md gift-bottle">
-        <Image src="/images/products/bottle.png" alt="Custom bottle" fill sizes="(max-width: 820px) 24vw, 10vw" />
+        <Image src="/images/products/corporate-gift-black-bottle.png" alt="Black custom bottle with a carry strap" fill sizes="(max-width: 820px) 24vw, 10vw" />
       </span>
       <span className="constellation-layer depth-lg gift-pen">
         <Image src="/images/products/metal-pen-customisation.png" alt="Custom engraved metal pen" fill sizes="(max-width: 820px) 72vw, 30vw" />

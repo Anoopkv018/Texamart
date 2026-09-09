@@ -38,7 +38,7 @@ export const categories: Category[] = [
     name: "Drinkware",
     shortName: "Drinkware",
     description: "Mugs and UV bottles made for daily routines and visible brand recall.",
-    image: "/images/products/uv-bottle-500ml.webp",
+    image: "/images/products/bottle.png",
     tone: "ink",
   },
   {
@@ -70,7 +70,7 @@ export const categories: Category[] = [
     name: "Other Products",
     shortName: "Other",
     description: "Flags, umbrellas and custom formats for the brief beyond the usual.",
-    image: "/images/products/custom-flags.webp",
+    image: "/images/products/custom-flags-new.png",
     tone: "blue",
   },
 ];
