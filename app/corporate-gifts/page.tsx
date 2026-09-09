@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { GiftSelector } from "@/src/components/GiftSelector";
 import { ProductConstellation } from "@/src/components/ProductConstellation";
@@ -6,8 +5,14 @@ import { PageHero } from "@/src/components/PageHero";
 import { ProductGrid } from "@/src/components/products/ProductGrid";
 import { CTASection } from "@/src/components/CTASection";
 import { products } from "@/src/data/products";
+import { createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = { title: "Corporate Gifts", description: "Build custom corporate gift combinations with bottles, diaries, pens, mugs, bags and branded merchandise." };
+export const metadata = createPageMetadata({
+  title: "Corporate Gifts in Mysuru",
+  description: "Create custom corporate gift sets in Mysuru with branded bottles, diaries, pens, mugs, apparel, bags and keychains for employees, clients and events.",
+  path: "/corporate-gifts",
+  keywords: ["corporate gift sets Mysuru", "employee gifts Karnataka", "custom branded gifts for companies"],
+});
 const giftProducts = products.filter((product) => ["uv-bottle-750ml","diary","metal-pen","mug","tote-bag","backpack","premium-caps","acrylic-keychain"].includes(product.slug));
 const giftSets = [
   { src: "/images/corporate-gifts/cork-diary-tumbler-set.png", title: "Cork-accent desk set", alt: "Black diary, pen and tumbler presented in a gift box with cork accents" },

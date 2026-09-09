@@ -131,10 +131,11 @@ export const products: Product[] = [
   { id: "satin-keychain", slug: "satin-keychain", name: "Satin Keychain", category: "keychains-gifts", image: "/images/products/satin-keychain-lanyards.webp", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
     { src: "/images/products/satin-keychain-wristlets.webp", alt: "Collection of printed satin wristlet keychains", caption: "Wristlet styles" },
   ], description: descriptions.gift, priceOptions: [15], moq: 500 },
-  { id: "wooden-keychain", slug: "wooden-keychain", name: "Wooden Keychain", category: "keychains-gifts", image: "/images/products/wooden-keychain-collection.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.gift, priceOptions: [35], moq: 50 },
+  { id: "wooden-keychain", slug: "wooden-keychain", name: "Wooden Keychain", category: "keychains-gifts", image: "/images/products/wooden-keychain.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Wood-finish keychains in multiple shapes for logos, names and custom branded gifting.", priceOptions: [55], moq: 50 },
+  { id: "leather-keychain", slug: "leather-keychain", name: "Leather Keychain", category: "keychains-gifts", image: "/images/products/leather-keychain.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Leather-loop keychains in a selection of colours with a metal ring and snap detail for custom branding.", priceOptions: [55] },
   { id: "button-keychain", slug: "button-keychain", name: "Button Keychain", category: "keychains-gifts", image: "/images/products/button-keychain.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A round button keychain shown from the front and back, ready for a custom design or brand requirement.", priceOptions: [35], moq: 50 },
   { id: "acrylic-keychain", slug: "acrylic-keychain", name: "Acrylic Keychain", category: "keychains-gifts", image: "/images/products/acrylic-keychain.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Custom-shaped acrylic keychains that turn logos, symbols and artwork into practical branded keepsakes.", priceOptions: [45], moq: 50, featured: true },
-  { id: "mementoes", slug: "mementoes", name: "Mementoes", category: "keychains-gifts", image: "/images/products/mementoes-elephant-display.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.gift, priceOnRequest: true },
+  { id: "mementoes", slug: "mementoes", name: "Mementoes", category: "keychains-gifts", image: "/images/products/mementoes-elephant-display.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.gift, priceOptions: [899] },
 
   { id: "mug", slug: "mug", name: "Mug", category: "drinkware", image: "/images/products/mug.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.drinkware, priceOptions: [160], featured: true },
   {
@@ -201,7 +202,7 @@ export const products: Product[] = [
     preserveImageColors: true,
     galleryDisplay: "thumbnails",
     description: "A leather wrist band with an adjustable snap fastening for gift, event and branded requirements.",
-    priceOptions: [10],
+    priceOptions: [40],
     unit: "each",
   },
   {
@@ -213,7 +214,7 @@ export const products: Product[] = [
     preserveImageColors: true,
     galleryDisplay: "thumbnails",
     description: "A lightweight paper wrist band shown in red, orange and yellow for event and identification requirements.",
-    priceOptions: [10],
+    priceOptions: [5.5],
     unit: "each",
   },
   {
@@ -225,12 +226,12 @@ export const products: Product[] = [
     preserveImageColors: true,
     galleryDisplay: "thumbnails",
     description: "A fabric wrist band with an adjustable slider, shown in multiple colours for event and campaign requirements.",
-    priceOptions: [10],
+    priceOptions: [8.5],
     unit: "each",
   },
   { id: "button-badge", slug: "button-badge", name: "Button Badge", category: "stationery", image: "/images/products/button-badge.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.stationery, priceOptions: [20, 25], pricingNote: "₹20 — MOQ 100 · ₹25 — MOQ 50. Option details to be confirmed." },
   { id: "sticker-a5-custom-cut", slug: "sticker-a5-custom-cut", name: "Custom-Cut Stickers — A5", category: "stationery", image: "/images/products/custom-cut-stickers.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Custom-cut stickers prepared on an A5 format for product labels, packaging, gifts and branded applications.", priceOptions: [40], moq: 100 },
-  { id: "lanyard-tag", slug: "lanyard-tag", name: "Lanyard Tag", category: "stationery", image: "/images/products/lanyard-tag.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A custom printed lanyard option with a metal clip, shown in black, blue, red and yellow for branded identification requirements.", priceOptions: [35] },
+  { id: "lanyard-tag", slug: "lanyard-tag", name: "Laneyard Tag", category: "stationery", image: "/images/products/lanyard-tag.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A custom printed laneyard option with a metal clip, shown in black, blue, red and yellow for branded identification requirements.", priceOptions: [35] },
 
   {
     id: "miss-india-sachet", slug: "miss-india-sachet", name: "Miss India Sachet", category: "sachets", image: "/images/products/miss-india-sachet.webp", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
@@ -242,13 +243,13 @@ export const products: Product[] = [
   { id: "tote-bag", slug: "tote-bag", name: "Tote Bag", category: "bags-accessories", image: "/images/products/tote-bag.webp", preserveImageColors: true, galleryDisplay: "thumbnails", availableColours: colours(1, 2), description: descriptions.bag, priceOptions: [12.5, 16.5, 55, 75, 125, 170], featured: true },
   { id: "jute-bag", slug: "jute-bag", name: "Jute Bag", category: "bags-accessories", image: "/images/products/jute-bag-structured.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A structured jute carry bag with twin handles and a broad front area for branded requirements.", priceOptions: [60, 90, 110, 160] },
   { id: "jute-pouch", slug: "jute-pouch", name: "Jute Pouches", category: "bags-accessories", image: "/images/products/jute-pouches-colours.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Drawstring jute pouches shown in multiple colours for gifting, packaging and branded presentation.", priceOptions: [8.5, 12.5, 14.5] },
-  { id: "backpack", slug: "backpack", name: "Backpack", category: "bags-accessories", image: "/images/products/backpack.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.bag, priceOnRequest: true },
-  { id: "laptop-bag", slug: "laptop-bag", name: "Laptop Bag", category: "bags-accessories", image: "/images/products/laptop-bag-black.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A structured black laptop backpack with padded shoulder straps, multiple zipped compartments and a broad front area for branded requirements.", priceOnRequest: true },
-  { id: "trolley", slug: "trolley", name: "Trolley", category: "bags-accessories", image: "/images/products/trolley.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A compact hard-shell trolley with a telescopic handle and four-wheel base for travel and gifting requirements.", priceOnRequest: true },
+  { id: "backpack", slug: "backpack", name: "Backpack", category: "bags-accessories", image: "/images/products/backpack.webp", preserveImageColors: true, galleryDisplay: "thumbnails", description: descriptions.bag, priceOptions: [430] },
+  { id: "laptop-bag", slug: "laptop-bag", name: "Laptop Bag", category: "bags-accessories", image: "/images/products/laptop-bag-black.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A structured black laptop backpack with padded shoulder straps, multiple zipped compartments and a broad front area for branded requirements.", priceOptions: [999] },
+  { id: "trolley", slug: "trolley", name: "Trolley", category: "bags-accessories", image: "/images/products/trolley.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A compact hard-shell trolley with a telescopic handle and four-wheel base for travel and gifting requirements.", priceOptions: [3500] },
 
   { id: "custom-flags", slug: "custom-flags", name: "Custom Flags", category: "other-products", image: "/images/products/custom-flags-new.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A custom printed flag format for events, teams, institutions and branded display requirements.", priceOptions: [60, 400, 600], featured: true },
-  { id: "umbrella", slug: "umbrella", name: "Umbrella", category: "other-products", image: "/images/products/umbrella-black.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A full-size black umbrella for practical gifting, event and branded merchandise requirements.", priceOptions: [200] },
-  { id: "mysuru-shalya", slug: "mysuru-shalya", name: "Mysuru Shalya", category: "other-products", image: "/images/products/mysuru-shalya.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A ceremonial Mysuru shalya with an ornate woven border and tassel finish, available in a selection of traditional colourways.", priceOnRequest: true },
+  { id: "umbrella", slug: "umbrella", name: "Umbrella", category: "other-products", image: "/images/products/umbrella-black.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A full-size black umbrella for practical gifting, event and branded merchandise requirements.", priceOptions: [600] },
+  { id: "mysuru-shalya", slug: "mysuru-shalya", name: "Mysuru Shalya", category: "other-products", image: "/images/products/mysuru-shalya.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A ceremonial Mysuru shalya with an ornate woven border and tassel finish, available in a selection of traditional colourways.", priceOptions: [110] },
 ];
 
 export function getProduct(category: string, slug: string) {

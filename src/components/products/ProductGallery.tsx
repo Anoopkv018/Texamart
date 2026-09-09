@@ -24,7 +24,8 @@ export function ProductGallery({ images, preserveImageColors = false }: ProductG
             src={activeImage.src}
             alt={activeImage.alt}
             fill
-            loading={activeIndex === 0 ? "eager" : "lazy"}
+            preload={activeIndex === 0}
+            loading={activeIndex === 0 ? undefined : "lazy"}
             sizes="(max-width: 560px) calc(100vw - 1.25rem), (max-width: 820px) calc(100vw - 2rem), 52vw"
           />
         </div>

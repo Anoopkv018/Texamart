@@ -1,5 +1,6 @@
 import type { Product } from "@/src/types/product";
 import { siteConfig } from "@/src/data/site";
+import { formatPrice } from "@/src/lib/price";
 
 export function createWhatsAppUrl(message: string) {
   return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`;
@@ -23,7 +24,7 @@ export function buildProductEnquiryMessage({
   pageUrl?: string;
 }) {
   const category = product.category.replaceAll("-", " ");
-  const prices = product.priceOptions?.map((price) => `₹${price}`).join(" / ") ?? "Price on request";
+  const prices = product.priceOptions?.map((price) => `₹${formatPrice(price)}`).join(" / ") ?? "Price on request";
   return `Hi Texa Mart,\n\nI'm interested in the ${product.name}.\n\nCategory: ${category}\nAvailable price options: ${prices}${product.moq ? `\nMOQ: ${product.moq}` : ""}\nQuantity: ${quantity || ""}\nPreferred price/variant: ${preferredPrice || ""}\nCustomization requirement:\nAdditional requirement: ${notes || ""}${pageUrl ? `\nProduct page: ${pageUrl}` : ""}\n\nPlease share the quotation and order details.`;
 }
 

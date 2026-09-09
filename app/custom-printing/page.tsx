@@ -1,12 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { PageHero } from "@/src/components/PageHero";
 import { CTASection } from "@/src/components/CTASection";
 import { Reveal } from "@/src/components/motion/Reveal";
+import { createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = { title: "Custom Printing", description: "Turn your idea and brand requirement into custom apparel, merchandise, gifts and accessories with Texa Mart." };
+export const metadata = createPageMetadata({
+  title: "Custom T-Shirt Printing in Mysuru",
+  description: "Custom T-shirt printing, apparel branding and merchandise printing in Mysuru for teams, schools, events, businesses and bulk orders.",
+  path: "/custom-printing",
+  keywords: ["T-shirt printing Mysuru", "custom polo printing", "apparel printing Karnataka", "bulk garment printing"],
+});
 const journey = ["Choose the product", "Share your design or branding requirement", "Confirm the quantity", "Get the quotation", "Finalize the order directly with Texa Mart"];
 
 export default function CustomPrintingPage() {

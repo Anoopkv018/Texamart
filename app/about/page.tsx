@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDownRight, ArrowRight, MessageCircle } from "lucide-react";
 import { AboutExperience } from "@/src/components/about/AboutExperience";
 import { CTASection } from "@/src/components/CTASection";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
+import { createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About TEXA T-Shirts",
-  description: "Meet TEXA T-Shirts, a Mysuru-based custom apparel brand creating printed and embroidered garments for teams, institutions, events and businesses.",
-};
+export const metadata = createPageMetadata({
+  title: "About Our Custom Apparel Production",
+  description: "Meet TEXA T-Shirts, Texa Mart’s Mysuru-based custom apparel team producing printed and embroidered garments for businesses, schools, institutions and events.",
+  path: "/about",
+  keywords: ["T-shirt manufacturer Mysuru", "custom apparel production Mysuru", "T-shirt embroidery Mysuru"],
+});
 
 const quoteUrl = createWhatsAppUrl(buildGeneralEnquiryMessage("a custom apparel or bulk garment requirement"));
 

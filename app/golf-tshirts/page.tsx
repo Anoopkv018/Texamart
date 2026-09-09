@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -15,11 +14,14 @@ import {
 } from "lucide-react";
 import { ProductGallery } from "@/src/components/products/ProductGallery";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
+import { createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Swing Style Golf T-Shirts",
-  description: "Explore seven Swing Style printed golf T-shirts in 93% micro polyester and 7% spandex, then request pricing and order details from Texa Mart.",
-};
+export const metadata = createPageMetadata({
+  title: "Swing Style Printed Golf T-Shirts",
+  description: "Explore seven Swing Style printed golf T-shirts in 93% micro polyester and 7% spandex, with UV protection, moisture wicking and four-way stretch.",
+  path: "/golf-tshirts",
+  keywords: ["printed golf T-shirts", "custom golf polo Mysuru", "sports team T-shirts", "micro polyester golf shirt"],
+});
 
 const designs = [
   { name: "Geometric Teal", src: "/images/golf/geometric-teal.jpg" },

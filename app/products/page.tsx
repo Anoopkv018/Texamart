@@ -1,11 +1,16 @@
-import type { Metadata } from "next";
 import { CategoryRail } from "@/src/components/CategoryRail";
 import { PageHero } from "@/src/components/PageHero";
 import { ProductGrid } from "@/src/components/products/ProductGrid";
 import { CTASection } from "@/src/components/CTASection";
 import { products } from "@/src/data/products";
+import { createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = { title: "Products", description: "Browse Texa Mart custom apparel, merchandise, gifts, drinkware, bags and branded essentials." };
+export const metadata = createPageMetadata({
+  title: "Custom Merchandise Catalogue",
+  description: "Browse Texa Mart custom apparel, T-shirts, corporate gifts, drinkware, keychains, bags, stationery and promotional products available in Mysuru.",
+  path: "/products",
+  keywords: ["custom products catalogue", "promotional merchandise Mysuru", "branded products Karnataka"],
+});
 
 export default function ProductsPage() {
   return (

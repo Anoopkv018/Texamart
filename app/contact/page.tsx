@@ -1,11 +1,16 @@
-import type { Metadata } from "next";
 import { Building2, Mail, MapPin, MessageCircle, Phone, ReceiptText } from "lucide-react";
 import { PageHero } from "@/src/components/PageHero";
 import { QuoteBuilder } from "@/src/components/whatsapp/QuoteBuilder";
 import { siteConfig } from "@/src/data/site";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
+import { createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = { title: "Contact & Quote", description: "Call Texa Mart or prepare a custom merchandise quotation request for WhatsApp." };
+export const metadata = createPageMetadata({
+  title: "Contact Texa Mart for Custom Product Quotes",
+  description: "Contact Texa Mart in Mysuru for custom T-shirt printing, branded merchandise, corporate gifts and bulk product quotations by phone, email or WhatsApp.",
+  path: "/contact",
+  keywords: ["Texa Mart contact", "custom merchandise quote Mysuru", "bulk T-shirt printing quotation"],
+});
 export default function ContactPage() {
   return (
     <>

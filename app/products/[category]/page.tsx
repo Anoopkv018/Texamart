@@ -6,13 +6,19 @@ import { ProductGrid } from "@/src/components/products/ProductGrid";
 import { CTASection } from "@/src/components/CTASection";
 import { categories, getCategory } from "@/src/data/categories";
 import { getProductsByCategory } from "@/src/data/products";
+import { createPageMetadata } from "@/src/lib/seo";
 
 export function generateStaticParams() { return categories.map((category) => ({ category: category.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
   const { category: slug } = await params;
   const category = getCategory(slug);
   if (!category) return {};
-  return { title: category.name, description: category.description };
+  return createPageMetadata({
+    title: `${category.name} in Mysuru`,
+    description: `${category.description} Browse custom ${category.shortName.toLowerCase()} options from Texa Mart in Mysuru and request a quotation on WhatsApp.`,
+    path: `/products/${category.slug}`,
+    keywords: [`custom ${category.shortName.toLowerCase()} Mysuru`, `${category.name} Karnataka`, `branded ${category.shortName.toLowerCase()}`],
+  });
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {

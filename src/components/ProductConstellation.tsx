@@ -83,8 +83,7 @@ export function ProductConstellation({ variant, className = "" }: ProductConstel
             src="/images/products/collar-tshirt-front.webp"
             alt="Model wearing a green custom collar T-shirt"
             fill
-            loading="eager"
-            fetchPriority="high"
+            preload
             sizes="(max-width: 820px) 58vw, 25vw"
           />
         </span>

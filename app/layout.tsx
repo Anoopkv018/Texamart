@@ -1,19 +1,50 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/bricolage-grotesque";
 import "@fontsource-variable/outfit";
 import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { FloatingWhatsApp } from "@/src/components/whatsapp/FloatingWhatsApp";
+import { siteConfig } from "@/src/data/site";
+import { baseKeywords } from "@/src/lib/seo";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const metadata: Metadata = {
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
-  title: { default: "Texa Mart — Custom Merchandise & Corporate Gifts", template: "%s | Texa Mart" },
-  description: "Custom apparel, merchandise and corporate gifts. Browse products and request a quotation from Texa Mart on WhatsApp.",
-  openGraph: { title: "Texa Mart — Make Your Brand Tangible", description: "Custom printing, merchandise and corporate gifts.", type: "website", ...(siteUrl ? { images: ["/brand/texa-mart-glow-logo.png"] } : {}) },
-  twitter: { card: "summary_large_image", title: "Texa Mart", description: "Custom printing, merchandise and corporate gifts.", ...(siteUrl ? { images: ["/brand/texa-mart-glow-logo.png"] } : {}) },
+  title: { default: "Texa Mart Mysuru | Custom T-Shirt Printing & Corporate Gifts", template: "%s | Texa Mart Mysuru" },
+  description: "Custom T-shirt printing, branded apparel, corporate gifts and promotional products in Mysuru, Karnataka. Request a quotation from Texa Mart on WhatsApp.",
+  keywords: baseKeywords,
+  applicationName: "Texa Mart",
+  authors: [{ name: siteConfig.legalName }],
+  creator: siteConfig.legalName,
+  publisher: siteConfig.legalName,
+  category: "Custom merchandise and corporate gifting",
+  formatDetection: { email: false, address: false, telephone: false },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+  openGraph: {
+    title: "Texa Mart Mysuru | Custom T-Shirt Printing & Corporate Gifts",
+    description: "Custom printing, branded merchandise and corporate gifts for teams, events and businesses in Mysuru.",
+    type: "website",
+    siteName: "Texa Mart",
+    locale: "en_IN",
+    ...(siteUrl ? { url: siteUrl, images: [{ url: "/brand/texa-mart-glow-logo.png", alt: "Texa Mart custom merchandise and corporate gifting" }] } : {}),
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Texa Mart Mysuru | Custom Printing & Corporate Gifts",
+    description: "Custom apparel, branded merchandise and corporate gifts in Mysuru, Karnataka.",
+    ...(siteUrl ? { images: ["/brand/texa-mart-glow-logo.png"] } : {}),
+  },
+  other: { "geo.region": "IN-KA", "geo.placename": "Mysuru" },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#fffaf2",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -21,6 +52,29 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: siteConfig.name,
+              legalName: siteConfig.legalName,
+              description: "Custom apparel, branded merchandise and corporate gifts in Mysuru, Karnataka.",
+              ...(siteUrl ? { url: siteUrl } : {}),
+              telephone: siteConfig.supportPhone,
+              email: [siteConfig.email, siteConfig.secondaryEmail],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "830/A, 11th Cross, Ramanuja Road, Fort Mohalla",
+                addressLocality: "Mysuru",
+                addressRegion: "Karnataka",
+                postalCode: "570004",
+                addressCountry: "IN",
+              },
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
         <span hidden aria-hidden="true" dangerouslySetInnerHTML={{ __html: contract }} />
         <a className="skip-link" href="#main-content">Skip to main content</a>
         <Header />

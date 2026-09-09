@@ -12,13 +12,19 @@ import { ProductCard } from "@/src/components/products/ProductCard";
 import { ColourAvailability } from "@/src/components/products/ColourAvailability";
 import { ProductGallery } from "@/src/components/products/ProductGallery";
 import { CTASection } from "@/src/components/CTASection";
+import { createPageMetadata } from "@/src/lib/seo";
 
 export function generateStaticParams() { return products.map((product) => ({ category: product.category, product: product.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ category: string; product: string }> }): Promise<Metadata> {
   const value = await params;
   const product = getProduct(value.category, value.product);
   if (!product) return {};
-  return { title: product.name, description: `${product.description} Request a Texa Mart quotation on WhatsApp.` };
+  return createPageMetadata({
+    title: `${product.name} for Custom Branding`,
+    description: `${product.description} Available from Texa Mart in Mysuru. Request current customization and order details on WhatsApp.`,
+    path: `/products/${product.category}/${product.slug}`,
+    keywords: [product.name, `${product.name} Mysuru`, `custom branded ${product.name}`],
+  });
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ category: string; product: string }> }) {

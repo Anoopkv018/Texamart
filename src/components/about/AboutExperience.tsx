@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type KeyboardEvent } from "react";
+import { useRef, useState } from "react";
 import {
   BadgeCheck,
   Boxes,
@@ -13,7 +13,6 @@ import {
   PenTool,
   Shirt,
   Sparkles,
-  Users,
   type LucideIcon,
 } from "lucide-react";
 
@@ -39,35 +38,12 @@ const services: Service[] = [
   { id: "bulk", title: "Bulk & Customized Orders", description: "Coordinated garment orders prepared to your required specifications and quantity.", context: "Small custom runs and bulk orders", tone: "sky", icon: Boxes },
 ];
 
-const process = [
-  { title: "Share your requirement", copy: "Tell us who the apparel is for, the quantity you need, your artwork and how it will be used." },
-  { title: "Choose fabric & fit", copy: "We work with you to identify a suitable fabric, fit and garment format for the requirement." },
-  { title: "Select the finish", copy: "Choose printing or embroidery around the garment, design and finish you want to achieve." },
-  { title: "Confirm your order", copy: "Review the specification, then continue final pricing and delivery details directly with TEXA." },
-];
-
 export function AboutExperience() {
   const [selectedService, setSelectedService] = useState(services[0].id);
   const [hoveredService, setHoveredService] = useState<string>();
-  const [selectedStep, setSelectedStep] = useState(0);
   const servicePreview = useRef<HTMLElement | null>(null);
-  const processTabs = useRef<Array<HTMLButtonElement | null>>([]);
   const activeService = services.find((service) => service.id === (hoveredService ?? selectedService)) ?? services[0];
   const ActiveIcon = activeService.icon;
-
-  function handleProcessKeyDown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
-    let nextIndex: number | undefined;
-
-    if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % process.length;
-    if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + process.length) % process.length;
-    if (event.key === "Home") nextIndex = 0;
-    if (event.key === "End") nextIndex = process.length - 1;
-    if (nextIndex === undefined) return;
-
-    event.preventDefault();
-    setSelectedStep(nextIndex);
-    processTabs.current[nextIndex]?.focus();
-  }
 
   function selectService(serviceId: string) {
     setSelectedService(serviceId);
@@ -123,32 +99,6 @@ export function AboutExperience() {
         </article>
       </div>
 
-      {/* <div className="about-process-shell">
-        <div className="about-process-nav" role="tablist" aria-label="How TEXA works">
-          {process.map((step, index) => (
-            <button
-              type="button"
-              role="tab"
-              id={`about-process-tab-${index}`}
-              aria-selected={selectedStep === index}
-              aria-controls="about-process-panel"
-              tabIndex={selectedStep === index ? 0 : -1}
-              className="about-process-tab"
-              onClick={() => setSelectedStep(index)}
-              onKeyDown={(event) => handleProcessKeyDown(event, index)}
-              ref={(element) => { processTabs.current[index] = element; }}
-              key={step.title}
-            >
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              {step.title}
-            </button>
-          ))}
-        </div>
-        <div className="about-process-panel" id="about-process-panel" role="tabpanel" aria-labelledby={`about-process-tab-${selectedStep}`} aria-live="polite" key={selectedStep}>
-          <Users aria-hidden="true" />
-          <p>{process[selectedStep].copy}</p>
-        </div>
-      </div> */}
     </>
   );
 }
