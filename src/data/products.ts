@@ -192,7 +192,9 @@ export const products: Product[] = [
       { src: "/images/products/metal-pen-2.webp", alt: "Black metal pen showing engraving positions and finish details", caption: "Custom engraving preview" },
     ], description: descriptions.stationery, priceOptions: [65], moq: 50
   },
-  { id: "uv-stickers", slug: "uv-stickers", name: "UV Stickers", category: "stationery", image: "/images/products/uv-stickers.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "Colourful UV stickers prepared in custom shapes for products, devices, packaging and promotional applications.", priceOptions: [30], pricingNote: "Client artwork also references approximately ₹4.25 per sq inch; confirm final specification." },
+  { id: "uv-stickers", slug: "uv-stickers", name: "UV Stickers", category: "stationery", image: "/images/products/uv-stickers-custom-colour.webp", preserveImageColors: true, galleryDisplay: "thumbnails", gallery: [
+    { src: "/images/products/uv-stickers-custom-black-red.webp", alt: "Stacked black and red custom UV stickers", caption: "Custom UV sticker finish" },
+  ], description: "Colourful UV stickers prepared in custom shapes for products, devices, packaging and promotional applications.", priceOptions: [30], pricingNote: "Client artwork also references approximately ₹4.25 per sq inch; confirm final specification." },
   { id: "bookmark", slug: "bookmark", name: "Bookmark", category: "stationery", image: "/images/products/bookmark-collection.png", preserveImageColors: true, galleryDisplay: "thumbnails", description: "A compact printed format for reader-focused gifts, events and memorable brand reminders.", priceOptions: [4.5] },
   {
     id: "leather-wrist-band",

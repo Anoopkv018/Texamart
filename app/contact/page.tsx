@@ -1,5 +1,6 @@
 import { Building2, Mail, MapPin, MessageCircle, Phone, ReceiptText } from "lucide-react";
 import { PageHero } from "@/src/components/PageHero";
+import { InstagramIcon } from "@/src/components/icons/InstagramIcon";
 import { QuoteBuilder } from "@/src/components/whatsapp/QuoteBuilder";
 import { siteConfig } from "@/src/data/site";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
@@ -42,6 +43,10 @@ export default function ContactPage() {
               <div className="contact-detail">
                 <ReceiptText aria-hidden="true" />
                 <div><span>GSTIN</span><strong>{siteConfig.gstin}</strong></div>
+              </div>
+              <div className="contact-detail">
+                <InstagramIcon aria-hidden="true" />
+                <div><span>Instagram</span><a href={siteConfig.social.instagram} target="_blank" rel="noreferrer">@texa__apparel</a></div>
               </div>
             </address>
           </div>

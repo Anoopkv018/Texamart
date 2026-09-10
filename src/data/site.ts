@@ -12,7 +12,7 @@ export const siteConfig = {
   address: "830/A, 11th Cross, Ramanuja Road, Fort Mohalla, Mysuru, Karnataka 570004",
   gstin: "29AAJCK3522F1ZK",
   social: {
-    instagram: undefined as string | undefined,
+    instagram: "https://www.instagram.com/texa__apparel/",
     facebook: undefined as string | undefined,
   },
 };

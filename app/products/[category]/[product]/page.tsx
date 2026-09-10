@@ -68,6 +68,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
               <div className="mt-8"><PriceDisplay product={product} detailed /></div>
               {product.moq && <p className="mt-4 inline-flex bg-[var(--brand-primary-soft)] px-3 py-2 text-sm font-extrabold text-[var(--brand-primary)]">Minimum order quantity: {product.moq}</p>}
               {product.pricingNote && <p className="price-note mt-5 border-l border-[var(--brand-primary)] pl-4">{product.pricingNote}</p>}
+              <p className="product-quotation-note">Prices and minimum quantities may vary depending on product specification, customization and order requirement. Contact Texa Mart for the final quotation.</p>
               {product.availableColours && <ColourAvailability colours={product.availableColours} />}
               <div className="detail-list">
                 <p className="label text-[var(--brand-muted)]">Product highlights</p>

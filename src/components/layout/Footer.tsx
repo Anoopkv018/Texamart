@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { InstagramIcon } from "@/src/components/icons/InstagramIcon";
 import { categories } from "@/src/data/categories";
 import { siteConfig } from "@/src/data/site";
 import { buildGeneralEnquiryMessage, createWhatsAppUrl } from "@/src/lib/whatsapp";
@@ -33,6 +34,10 @@ export function Footer() {
               <a href={`mailto:${siteConfig.secondaryEmail}`}>{siteConfig.secondaryEmail}</a>
               <span>GSTIN: {siteConfig.gstin}</span>
             </address>
+            <a className="footer-social-link" href={siteConfig.social.instagram} target="_blank" rel="noreferrer" aria-label="Follow Texa Apparel on Instagram">
+              <InstagramIcon aria-hidden="true" />
+              Instagram
+            </a>
             <div className="mt-8 grid gap-3 text-sm"><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms</Link></div>
           </div>
         </div>
